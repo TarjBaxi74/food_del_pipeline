@@ -1,0 +1,4 @@
+[project]
+name = "food-del-pipeline"
+version = "0.1.0"
+description = "Local Food Delivery Analytics Pipeline"

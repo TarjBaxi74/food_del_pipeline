@@ -1,0 +1,121 @@
+restaurant_id,city,cuisine_type,rating_band,onboarding_date
+1,Rajkot,North Indian,HIGH,2024-05-09
+2,Pune,South Indian,LOW,2025-05-17
+3,Rajkot,Street Food,HIGH,2024-01-30
+4,Rajkot,Biryani,MEDIUM,2024-08-13
+5,Rajkot,North Indian,LOW,2026-01-21
+6,Surat,Biryani,LOW,2025-06-29
+7,Pune,Street Food,HIGH,2024-07-28
+8,Surat,Pizza,LOW,2024-03-06
+9,Surat,Chinese,LOW,2024-11-20
+10,Pune,Street Food,MEDIUM,2024-01-07
+11,Gandhinagar,South Indian,LOW,2025-03-11
+12,Gandhinagar,North Indian,LOW,2024-01-03
+13,Rajkot,Chinese,MEDIUM,2025-01-29
+14,Gandhinagar,Cafe,LOW,2024-06-14
+15,Ahmedabad,Biryani,LOW,2024-02-06
+16,Rajkot,Biryani,MEDIUM,2025-01-31
+17,Surat,Cafe,MEDIUM,2023-10-27
+18,Pune,Street Food,LOW,2024-07-11
+19,Pune,Cafe,MEDIUM,2026-01-07
+20,Pune,Cafe,LOW,2025-12-03
+21,Gandhinagar,Pizza,HIGH,2025-01-29
+22,Gandhinagar,South Indian,MEDIUM,2023-10-22
+23,Pune,Street Food,MEDIUM,2025-02-24
+24,Rajkot,Biryani,HIGH,2024-03-06
+25,Surat,Street Food,LOW,2025-08-31
+26,Ahmedabad,Pizza,MEDIUM,2025-09-08
+27,Surat,South Indian,HIGH,2024-05-08
+28,Rajkot,South Indian,LOW,2025-03-27
+29,Gandhinagar,Pizza,MEDIUM,2023-11-21
+30,Pune,Biryani,HIGH,2025-12-17
+31,Pune,Street Food,MEDIUM,2025-04-06
+32,Ahmedabad,South Indian,MEDIUM,2025-01-13
+33,Pune,Street Food,HIGH,2025-10-03
+34,Gandhinagar,Street Food,HIGH,2024-08-20
+35,Surat,Pizza,MEDIUM,2024-12-11
+36,Pune,Biryani,MEDIUM,2025-07-13
+37,Rajkot,Cafe,LOW,2025-11-21
+38,Pune,Cafe,HIGH,2025-09-19
+39,Surat,North Indian,MEDIUM,2024-12-17
+40,Surat,Pizza,HIGH,2025-01-28
+41,Surat,Cafe,LOW,2025-06-10
+42,Rajkot,Street Food,HIGH,2024-03-28
+43,Gandhinagar,Cafe,HIGH,2024-01-16
+44,Rajkot,Chinese,MEDIUM,2025-03-11
+45,Ahmedabad,North Indian,HIGH,2025-09-14
+46,Gandhinagar,Biryani,LOW,2024-02-17
+47,Rajkot,Cafe,HIGH,2024-09-21
+48,Surat,Biryani,LOW,2025-04-23
+49,Gandhinagar,Cafe,LOW,2025-09-19
+50,Surat,North Indian,HIGH,2024-08-19
+51,Ahmedabad,North Indian,LOW,2025-03-28
+52,Gandhinagar,South Indian,LOW,2025-02-16
+53,Surat,North Indian,LOW,2025-06-21
+54,Ahmedabad,Cafe,LOW,2024-02-04
+55,Surat,Cafe,LOW,2024-01-06
+56,Ahmedabad,Biryani,LOW,2025-10-14
+57,Surat,Cafe,HIGH,2025-05-27
+58,Pune,Biryani,HIGH,2024-12-16
+59,Pune,Street Food,MEDIUM,2024-03-18
+60,Gandhinagar,Pizza,HIGH,2025-01-10
+61,Rajkot,South Indian,LOW,2024-11-17
+62,Gandhinagar,North Indian,HIGH,2025-12-19
+63,Pune,Biryani,LOW,2024-08-04
+64,Rajkot,Street Food,HIGH,2026-02-15
+65,Pune,North Indian,LOW,2025-12-24
+66,Rajkot,Biryani,LOW,2025-03-21
+67,Ahmedabad,South Indian,HIGH,2025-05-13
+68,Surat,Biryani,MEDIUM,2025-10-10
+69,Ahmedabad,Cafe,MEDIUM,2025-06-19
+70,Rajkot,North Indian,HIGH,2025-08-12
+71,Gandhinagar,Pizza,MEDIUM,2024-12-08
+72,Rajkot,Street Food,HIGH,2024-11-01
+73,Rajkot,North Indian,MEDIUM,2024-05-02
+74,Gandhinagar,Cafe,LOW,2024-02-08
+75,Pune,South Indian,HIGH,2025-06-13
+76,Pune,Pizza,LOW,2024-11-20
+77,Ahmedabad,South Indian,LOW,2025-05-13
+78,Surat,North Indian,LOW,2024-11-26
+79,Surat,Cafe,LOW,2024-04-26
+80,Pune,South Indian,MEDIUM,2025-11-19
+81,Ahmedabad,South Indian,MEDIUM,2024-10-13
+82,Pune,Pizza,LOW,2025-12-24
+83,Gandhinagar,Cafe,MEDIUM,2025-01-19
+84,Ahmedabad,Street Food,HIGH,2025-05-06
+85,Surat,Street Food,HIGH,2023-12-13
+86,Pune,South Indian,MEDIUM,2024-10-12
+87,Rajkot,Biryani,HIGH,2025-07-15
+88,Rajkot,Street Food,MEDIUM,2024-08-16
+89,Rajkot,Biryani,MEDIUM,2025-12-26
+90,Surat,South Indian,LOW,2024-09-26
+91,Rajkot,Cafe,LOW,2024-09-20
+92,Surat,North Indian,HIGH,2025-12-14
+93,Ahmedabad,North Indian,HIGH,2025-06-27
+94,Surat,Biryani,LOW,2025-06-15
+95,Rajkot,Pizza,HIGH,2024-05-29
+96,Surat,Biryani,MEDIUM,2024-07-05
+97,Pune,Street Food,HIGH,2025-05-31
+98,Pune,Chinese,MEDIUM,2025-04-07
+99,Gandhinagar,Pizza,MEDIUM,2025-10-11
+100,Rajkot,North Indian,MEDIUM,2024-01-15
+101,Surat,North Indian,LOW,2024-05-27
+102,Pune,Biryani,MEDIUM,2024-08-21
+103,Gandhinagar,North Indian,LOW,2025-10-10
+104,Gandhinagar,South Indian,MEDIUM,2025-02-09
+105,Surat,Street Food,MEDIUM,2023-10-23
+106,Surat,North Indian,HIGH,2024-06-06
+107,Surat,Chinese,HIGH,2023-11-09
+108,Pune,Chinese,LOW,2025-11-08
+109,Surat,South Indian,MEDIUM,2025-11-05
+110,Surat,South Indian,HIGH,2025-05-10
+111,Pune,Street Food,HIGH,2025-03-08
+112,Surat,Pizza,MEDIUM,2025-05-28
+113,Rajkot,North Indian,HIGH,2023-10-10
+114,Gandhinagar,North Indian,LOW,2024-12-16
+115,Pune,Street Food,MEDIUM,2025-03-18
+116,Ahmedabad,Biryani,HIGH,2025-09-10
+117,Surat,North Indian,LOW,2024-12-12
+118,Pune,Biryani,LOW,2025-12-07
+119,Gandhinagar,Biryani,HIGH,2023-10-22
+120,Ahmedabad,South Indian,LOW,2025-09-24
