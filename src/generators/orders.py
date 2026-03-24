@@ -41,17 +41,37 @@ class OrdersGenerator(BaseGenerator):
                     minutes=sla_minutes
                 )
 
-                orders.append({
+                # ---- REALISM INJECTIONS ----
+
+                payment_mode = random.choice(PAYMENT_MODES)
+
+                # Null payment mode (~3%)
+                if random.random() < 0.03:
+                    payment_mode = None
+
+                order_val = round(random.uniform(150, 800), 2)
+
+                # Abnormally high order value (~1%)
+                if random.random() < 0.01:
+                    order_val = round(random.uniform(1200, 2500), 2)
+
+                record = {
                     "order_id": order_id,
                     "customer_id": random.randint(1000, 5000),
                     "restaurant_id": random.randint(1, 120),
-                    "city": None,   # we will fix later in silver
+                    "city": None,   # will be derived in silver
                     "order_ts": order_time,
                     "promised_delivery_ts": promised_time,
                     "status": random.choice(STATUSES),
-                    "order_value": round(random.uniform(150, 800), 2),
-                    "payment_mode": random.choice(PAYMENT_MODES)
-                })
+                    "order_value": order_val,
+                    "payment_mode": payment_mode
+                }
+
+                orders.append(record)
+
+                # Duplicate order (~1%)
+                if random.random() < 0.01:
+                    orders.append(record.copy())
 
                 order_id += 1
 
@@ -60,4 +80,4 @@ class OrdersGenerator(BaseGenerator):
         df = pd.DataFrame(orders)
 
         self.save(df)
-        print("orders.csv generated")
+        print("orders.csv generated with realism")

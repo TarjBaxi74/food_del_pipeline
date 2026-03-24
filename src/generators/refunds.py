@@ -27,7 +27,7 @@ class RefundsGenerator(BaseGenerator):
                 order_time = pd.to_datetime(row["order_ts"])
 
                 refund_time = order_time + timedelta(
-                    minutes=random.randint(40, 180)
+                    minutes=random.randint(20, 200)
                 )
 
                 refund_amt = round(
@@ -47,5 +47,21 @@ class RefundsGenerator(BaseGenerator):
 
         df = pd.DataFrame(refunds)
 
+        # ---- REALISM INJECTION ----
+
+        # refund without order (~10 rows)
+        extra = []
+
+        for i in range(10):
+            extra.append({
+                "refund_id": refund_id + i,
+                "order_id": random.randint(50000, 60000),
+                "refund_ts": pd.Timestamp.now(),
+                "refund_reason": random.choice(REASONS),
+                "refund_amount": round(random.uniform(100, 500), 2)
+            })
+
+        df = pd.concat([df, pd.DataFrame(extra)])
+
         self.save(df)
-        print("refunds.csv generated")
+        print("refunds.csv generated with realism")
