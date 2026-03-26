@@ -6,13 +6,7 @@ def run():
 
     WAREHOUSE_DIR.mkdir(parents=True, exist_ok=True)
 
-    db_path = str(WAREHOUSE_DIR / "dev.duckdb")
-    print(f"Connecting to: {db_path}")
-
-    con = duckdb.connect(db_path)
-
-    available = con.execute("SHOW TABLES").fetchall()
-    print(f"Tables in DB: {available}")
+    con = duckdb.connect(str(WAREHOUSE_DIR / "dev.duckdb"))
 
     marts = {
         "01_SLA_breach_analysis": "sla_breach_analysis.csv",
@@ -23,15 +17,8 @@ def run():
     }
 
     for table, file in marts.items():
-
-        query = f"""
-        COPY (SELECT * FROM "{table}")
-        TO '{WAREHOUSE_DIR / file}'
-        (HEADER, DELIMITER ',')
-        """
-
-        con.execute(query)
-
+        df = con.execute(f'SELECT * FROM "{table}"').df()
+        df.to_csv(WAREHOUSE_DIR / file, index=False)
         print(f"{file} exported")
 
     con.close()
