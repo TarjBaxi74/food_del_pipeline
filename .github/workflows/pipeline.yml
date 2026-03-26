@@ -35,7 +35,7 @@ jobs:
         run: python -m src.pipeline_runner
 
       - name: Generate dbt Docs
-        run: cd dbt_project && dbt docs generate
+        run: cd dbt_project && dbt docs generate --profiles-dir .
 
       - name: Upload Warehouse Outputs
         uses: actions/upload-artifact@v4
@@ -49,7 +49,7 @@ jobs:
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dbt_project/target/
+          path: target/
 
   deploy-pages:
     needs: run-pipeline
