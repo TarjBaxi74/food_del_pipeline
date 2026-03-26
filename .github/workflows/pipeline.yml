@@ -1,0 +1,39 @@
+name: Food Delivery Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-pipeline:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Java (for Spark)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Full Pipeline
+        run: |
+          python -m src.pipeline_runner
+
+      - name: Upload Warehouse Outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: warehouse_outputs
+          path: data/warehouse/
