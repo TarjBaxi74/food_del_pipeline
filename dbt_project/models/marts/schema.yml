@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: mart_sla_breach_analysis
+    columns:
+      - name: city
+        tests: [not_null]
+
+  - name: mart_rider_performance
+    columns:
+      - name: rider_id
+        tests: [not_null]
+
+  - name: mart_weekly_trends
+    columns:
+      - name: week
+        tests: [not_null]

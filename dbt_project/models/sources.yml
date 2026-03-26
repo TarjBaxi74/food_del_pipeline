@@ -1,14 +1,9 @@
-version: 2
-
 sources:
-  - name: bronze
+  - name: silver
     tables:
       - name: orders
         meta:
-          external_location: "../data/bronze/orders.parquet"
-      - name: delivery_events
+          external_location: "../data/silver/orders.parquet"
+      - name: delivery_timeline
         meta:
-          external_location: "../data/bronze/delivery_events.parquet"
-      - name: refunds
-        meta:
-          external_location: "../data/bronze/refunds.parquet"
+          external_location: "../data/silver/delivery_timeline.parquet"

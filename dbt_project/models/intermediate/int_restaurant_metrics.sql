@@ -1,0 +1,9 @@
+SELECT
+    restaurant_id,
+    city,
+    COUNT(order_id) AS total_orders,
+    AVG(prep_delay_minutes) AS avg_prep_delay,
+    AVG(delay_minutes) AS avg_delivery_delay,
+    SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
+FROM {{ ref('stg_order_facts') }}
+GROUP BY restaurant_id, city

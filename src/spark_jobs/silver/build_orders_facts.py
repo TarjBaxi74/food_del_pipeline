@@ -26,7 +26,7 @@ def run():
         (unix_timestamp("delivered_ts") - unix_timestamp("order_ts")) / 60
     )
 
-    # ⭐ SLA Delay
+    # ⭐ SLA delay
     df = df.withColumn(
         "delay_minutes",
         (unix_timestamp("delivered_ts") - unix_timestamp("promised_delivery_ts")) / 60
@@ -37,13 +37,17 @@ def run():
         when(col("delay_minutes") > 0, 1).otherwise(0)
     )
 
-    # ⭐ Refund Aggregation
+    # ⭐ Prep delay proxy (VERY IMPORTANT METRIC)
+    df = df.withColumn(
+        "prep_delay_minutes",
+        (unix_timestamp("accepted_ts") - unix_timestamp("order_ts")) / 60
+    )
+
+    # ⭐ Refund aggregation
     refund_agg = (
         refunds
         .groupBy("order_id")
-        .agg(
-            sum("refund_amount").alias("refund_amount")
-        )
+        .agg(sum("refund_amount").alias("refund_amount"))
         .withColumn("has_refund_flag", lit(1))
     )
 
@@ -66,17 +70,13 @@ def run():
         when(col("rider_id").isNull(), 0).otherwise(1)
     )
 
-    # ⭐ Write via pandas with timestamp conversion
+    # ⭐ Stable parquet write
     output_path = str(SILVER_DIR / "order_facts.parquet")
 
     df_pd = df.toPandas()
-    # Convert timestamp columns to microsecond precision for compatibility
-    for col_name in df_pd.columns:
-        if str(df_pd[col_name].dtype) == 'datetime64[ns]':
-            df_pd[col_name] = df_pd[col_name].astype('datetime64[us]')
-    df_pd.to_parquet(output_path, index=False, engine='pyarrow')
+    df_pd.to_parquet(output_path, index=False)
 
-    print("✅ Silver order facts created")
+    print("✅ Silver order facts rebuilt (city + load_date + prep_delay fixed)")
 
     spark.stop()
 
