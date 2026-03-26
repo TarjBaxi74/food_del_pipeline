@@ -4,9 +4,13 @@ on:
   push:
     branches: [ main ]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   run-pipeline:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -25,15 +29,35 @@ jobs:
           java-version: '17'
 
       - name: Install Dependencies
-        run: |
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Run Full Pipeline
-        run: |
-          python -m src.pipeline_runner
+        run: python -m src.pipeline_runner
+
+      - name: Generate dbt Docs
+        run: cd dbt_project && dbt docs generate
 
       - name: Upload Warehouse Outputs
         uses: actions/upload-artifact@v4
         with:
           name: warehouse_outputs
           path: data/warehouse/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dbt_project/target/
+
+  deploy-pages:
+    needs: run-pipeline
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
