@@ -4,7 +4,7 @@ from config.settings import WAREHOUSE_DIR
 
 def run():
 
-    con = duckdb.connect("dbt_project/dev.duckdb")
+    con = duckdb.connect(str(WAREHOUSE_DIR / "dev.duckdb"))
 
     marts = {
         "01_SLA_breach_analysis": "sla_breach_analysis.csv",
