@@ -4,7 +4,15 @@ from config.settings import WAREHOUSE_DIR
 
 def run():
 
-    con = duckdb.connect(str(WAREHOUSE_DIR / "dev.duckdb"))
+    WAREHOUSE_DIR.mkdir(parents=True, exist_ok=True)
+
+    db_path = str(WAREHOUSE_DIR / "dev.duckdb")
+    print(f"Connecting to: {db_path}")
+
+    con = duckdb.connect(db_path)
+
+    available = con.execute("SHOW TABLES").fetchall()
+    print(f"Tables in DB: {available}")
 
     marts = {
         "01_SLA_breach_analysis": "sla_breach_analysis.csv",
