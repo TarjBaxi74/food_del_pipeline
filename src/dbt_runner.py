@@ -16,8 +16,8 @@ def run():
         # run from the dbt_project folder to ensure dbt_project.yml is found
         os.chdir('dbt_project')
 
-        dbt_run_cmd = 'dbt run'
-        dbt_test_cmd = 'dbt test'
+        dbt_run_cmd = 'dbt run --profiles-dir .'
+        dbt_test_cmd = 'dbt test --profiles-dir .'
 
         print("➡ Running dbt models")
         if os.system(dbt_run_cmd) != 0:
