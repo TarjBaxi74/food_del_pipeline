@@ -4,7 +4,9 @@ from config.settings import WAREHOUSE_DIR
 
 def run():
 
-    con = duckdb.connect("dbt_project/dev.duckdb")
+    WAREHOUSE_DIR.mkdir(parents=True, exist_ok=True)
+
+    con = duckdb.connect(str(WAREHOUSE_DIR / "dev.duckdb"))
 
     marts = {
         "01_SLA_breach_analysis": "sla_breach_analysis.csv",
@@ -15,15 +17,8 @@ def run():
     }
 
     for table, file in marts.items():
-
-        query = f"""
-        COPY (SELECT * FROM "{table}")
-        TO '{WAREHOUSE_DIR / file}'
-        (HEADER, DELIMITER ',')
-        """
-
-        con.execute(query)
-
+        df = con.execute(f'SELECT * FROM "{table}"').df()
+        df.to_csv(WAREHOUSE_DIR / file, index=False)
         print(f"{file} exported")
 
     con.close()
