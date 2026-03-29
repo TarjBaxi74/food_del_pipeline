@@ -1,2 +1,2 @@
 SELECT *
-FROM read_parquet('C:/DE_projects/food_del_pipeline/data/silver/orders.parquet')
+FROM read_parquet('../data/silver/orders.parquet')

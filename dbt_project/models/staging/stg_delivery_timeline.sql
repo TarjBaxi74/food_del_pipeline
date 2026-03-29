@@ -1,2 +1,2 @@
 SELECT *
-FROM read_parquet(' ../data/silver/delivery_timeline.parquet')
+FROM read_parquet('../data/silver/delivery_timeline.parquet')
