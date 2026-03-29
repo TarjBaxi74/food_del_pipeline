@@ -7336,3 +7336,2158 @@ There are 1 unused configuration paths:
 [0m11:01:24.555712 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4407C7CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C4407C6ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C446FA2C50>]}
 [0m11:01:24.555712 [debug] [MainThread]: Flushing usage events
 [0m11:01:26.220532 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:37:52.754838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C43AB4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C42D0E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C43AB490>]}
+
+
+============================== 18:37:52.759824 | 82d436cc-d9f7-45fd-8555-bed5ca1f93e3 ==============================
+[0m18:37:52.759824 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:37:52.760821 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\DE_projects\\food_del_pipeline\\logs'}
+[0m18:37:53.026844 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C43CAD50>]}
+[0m18:37:53.067931 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C0AFF250>]}
+[0m18:37:53.080821 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:37:53.533696 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m18:37:53.607800 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m18:37:53.608749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C339BD90>]}
+[0m18:37:56.218192 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_sla_breach_analysis' in the 'models' section of file 'dbt_project/models\marts\schema.yml'
+[0m18:37:56.220193 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_rider_performance' in the 'models' section of file 'dbt_project/models\marts\schema.yml'
+[0m18:37:56.221193 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mart_weekly_trends' in the 'models' section of file 'dbt_project/models\marts\schema.yml'
+[0m18:37:56.295744 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_project.not_null_mart_sla_breach_analysis_city.0533edd668' (dbt_project/models\marts\schema.yml) depends on a node named 'mart_sla_breach_analysis' in package '' which was not found
+[0m18:37:56.296775 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_project.not_null_mart_rider_performance_rider_id.1f28c28af8' (dbt_project/models\marts\schema.yml) depends on a node named 'mart_rider_performance' in package '' which was not found
+[0m18:37:56.297997 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_project.not_null_mart_weekly_trends_week.fc4fec8b93' (dbt_project/models\marts\schema.yml) depends on a node named 'mart_weekly_trends' in package '' which was not found
+[0m18:37:56.360084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5B1DB10>]}
+[0m18:37:56.413132 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:37:56.426133 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:37:56.458133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C2978D90>]}
+[0m18:37:56.458133 [info ] [MainThread]: Found 11 models, 2 sources, 474 macros
+[0m18:37:56.459133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5D507D0>]}
+[0m18:37:56.461149 [info ] [MainThread]: 
+[0m18:37:56.461149 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:37:56.462133 [info ] [MainThread]: 
+[0m18:37:56.462133 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:37:56.466139 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m18:37:59.011778 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m18:37:59.012775 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m18:37:59.013777 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:59.050665 [debug] [ThreadPool]: SQL status: OK in 0.037 seconds
+[0m18:37:59.052686 [debug] [ThreadPool]: On list_dev: Close
+[0m18:37:59.052686 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m18:37:59.053666 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m18:37:59.058667 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:37:59.058667 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m18:37:59.058667 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:37:59.060666 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:37:59.060666 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:37:59.061668 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m18:37:59.061668 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:37:59.062667 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:37:59.062667 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m18:37:59.063666 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:37:59.064695 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m18:37:59.064695 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:37:59.064695 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m18:37:59.065666 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:37:59.065666 [debug] [ThreadPool]: On create_dev_main: Close
+[0m18:37:59.066666 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m18:37:59.070690 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:37:59.070690 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m18:37:59.070690 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:37:59.071667 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:37:59.071667 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:37:59.072665 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m18:37:59.080665 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m18:37:59.081666 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m18:37:59.092719 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m18:37:59.092719 [debug] [ThreadPool]: On list_dev_main: Close
+[0m18:37:59.094778 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5B01C90>]}
+[0m18:37:59.094778 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:37:59.095668 [debug] [MainThread]: On master: BEGIN
+[0m18:37:59.095668 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:37:59.095668 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:37:59.096667 [debug] [MainThread]: On master: COMMIT
+[0m18:37:59.096667 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:37:59.096667 [debug] [MainThread]: On master: COMMIT
+[0m18:37:59.096667 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:37:59.097668 [debug] [MainThread]: On master: Close
+[0m18:37:59.101668 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_delivery_timeline
+[0m18:37:59.102667 [info ] [Thread-1 (]: 1 of 11 START sql table model main.stg_delivery_timeline ....................... [RUN]
+[0m18:37:59.103667 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.stg_delivery_timeline'
+[0m18:37:59.103667 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_delivery_timeline
+[0m18:37:59.107685 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.108682 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_delivery_timeline
+[0m18:37:59.130668 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.131667 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.131667 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: BEGIN
+[0m18:37:59.131667 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:37:59.132666 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.133667 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.133667 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_delivery_timeline__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/delivery_timeline.parquet')
+    );
+  
+  
+[0m18:37:59.144683 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m18:37:59.147682 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.148682 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_delivery_timeline'
+  
+[0m18:37:59.149666 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.150684 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.150684 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_delivery_timeline'
+  
+[0m18:37:59.155666 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:37:59.160689 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.160689 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+alter view "dev"."main"."stg_delivery_timeline" rename to "stg_delivery_timeline__dbt_backup"
+[0m18:37:59.162666 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.164668 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.164668 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+alter table "dev"."main"."stg_delivery_timeline__dbt_tmp" rename to "stg_delivery_timeline"
+[0m18:37:59.165667 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.174666 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: COMMIT
+[0m18:37:59.174666 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.175668 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: COMMIT
+[0m18:37:59.180786 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:37:59.184668 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:37:59.185667 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+      drop view if exists "dev"."main"."stg_delivery_timeline__dbt_backup" cascade
+    
+[0m18:37:59.188793 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:37:59.190666 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: Close
+[0m18:37:59.192667 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5ACCD10>]}
+[0m18:37:59.192667 [info ] [Thread-1 (]: 1 of 11 OK created sql table model main.stg_delivery_timeline .................. [[32mOK[0m in 0.09s]
+[0m18:37:59.193666 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_delivery_timeline
+[0m18:37:59.193666 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_order_facts
+[0m18:37:59.194666 [info ] [Thread-1 (]: 2 of 11 START sql table model main.stg_order_facts ............................. [RUN]
+[0m18:37:59.194666 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_delivery_timeline, now model.dbt_project.stg_order_facts)
+[0m18:37:59.195666 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_order_facts
+[0m18:37:59.247668 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_order_facts"
+[0m18:37:59.248682 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_order_facts
+[0m18:37:59.251683 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_order_facts"
+[0m18:37:59.252666 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.252666 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: BEGIN
+[0m18:37:59.252666 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.253665 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.253665 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.253665 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_order_facts__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/order_facts.parquet')
+    );
+  
+  
+[0m18:37:59.285621 [debug] [Thread-1 (]: SQL status: OK in 0.031 seconds
+[0m18:37:59.286525 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.286525 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_order_facts'
+  
+[0m18:37:59.287612 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.288602 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.288602 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_order_facts'
+  
+[0m18:37:59.289504 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.291609 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.292597 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+alter view "dev"."main"."stg_order_facts" rename to "stg_order_facts__dbt_backup"
+[0m18:37:59.292597 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.294604 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.294604 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+alter table "dev"."main"."stg_order_facts__dbt_tmp" rename to "stg_order_facts"
+[0m18:37:59.295503 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.296506 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: COMMIT
+[0m18:37:59.296506 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.297519 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: COMMIT
+[0m18:37:59.304501 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:37:59.306503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:37:59.307503 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+      drop view if exists "dev"."main"."stg_order_facts__dbt_backup" cascade
+    
+[0m18:37:59.309500 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.310518 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: Close
+[0m18:37:59.310518 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C72FCF90>]}
+[0m18:37:59.311501 [info ] [Thread-1 (]: 2 of 11 OK created sql table model main.stg_order_facts ........................ [[32mOK[0m in 0.12s]
+[0m18:37:59.311501 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_order_facts
+[0m18:37:59.312502 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_orders
+[0m18:37:59.313502 [info ] [Thread-1 (]: 3 of 11 START sql table model main.stg_orders .................................. [RUN]
+[0m18:37:59.313502 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_order_facts, now model.dbt_project.stg_orders)
+[0m18:37:59.314502 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_orders
+[0m18:37:59.315504 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m18:37:59.316503 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_orders
+[0m18:37:59.319505 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_orders"
+[0m18:37:59.321505 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.321505 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: BEGIN
+[0m18:37:59.322504 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.322504 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.323503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.323503 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_orders__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/orders.parquet')
+    );
+  
+  
+[0m18:37:59.333502 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m18:37:59.335503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.335503 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_orders'
+  
+[0m18:37:59.336503 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.337503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.338504 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_orders'
+  
+[0m18:37:59.339504 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.342503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.342503 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter view "dev"."main"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m18:37:59.343502 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.346502 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.346502 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter table "dev"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m18:37:59.346502 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.348504 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m18:37:59.348504 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.348504 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m18:37:59.354501 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:37:59.356503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:37:59.356503 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+      drop view if exists "dev"."main"."stg_orders__dbt_backup" cascade
+    
+[0m18:37:59.359502 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.360505 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: Close
+[0m18:37:59.361505 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5E54CD0>]}
+[0m18:37:59.361505 [info ] [Thread-1 (]: 3 of 11 OK created sql table model main.stg_orders ............................. [[32mOK[0m in 0.05s]
+[0m18:37:59.362503 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_orders
+[0m18:37:59.362503 [debug] [Thread-1 (]: Began running node model.dbt_project.03_refund_drivers
+[0m18:37:59.363503 [info ] [Thread-1 (]: 4 of 11 START sql table model main.03_refund_drivers ........................... [RUN]
+[0m18:37:59.363503 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_orders, now model.dbt_project.03_refund_drivers)
+[0m18:37:59.364502 [debug] [Thread-1 (]: Began compiling node model.dbt_project.03_refund_drivers
+[0m18:37:59.368503 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.03_refund_drivers"
+[0m18:37:59.369503 [debug] [Thread-1 (]: Began executing node model.dbt_project.03_refund_drivers
+[0m18:37:59.372538 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.03_refund_drivers"
+[0m18:37:59.372538 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.373503 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: BEGIN
+[0m18:37:59.373503 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.374502 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.374502 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.375504 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."03_refund_drivers__dbt_tmp"
+  
+    as (
+      SELECT
+    CASE
+        WHEN sla_breach_flag = 1 THEN 'DELAY'
+        WHEN delivery_success_flag = 0 THEN 'CANCELLATION'
+        ELSE 'OTHER'
+    END AS refund_reason,
+    COUNT(order_id) AS total_orders,
+    SUM(has_refund_flag) AS refunded_orders,
+    SUM(has_refund_flag) * 1.0 / COUNT(order_id) AS refund_rate
+FROM "dev"."main"."stg_order_facts"
+GROUP BY refund_reason
+    );
+  
+  
+[0m18:37:59.391501 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m18:37:59.393503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.393503 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '03_refund_drivers'
+  
+[0m18:37:59.394504 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.396507 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.396507 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '03_refund_drivers'
+  
+[0m18:37:59.397503 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.400504 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.401503 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+alter view "dev"."main"."03_refund_drivers" rename to "03_refund_drivers__dbt_backup"
+[0m18:37:59.401503 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.404503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.404503 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+alter table "dev"."main"."03_refund_drivers__dbt_tmp" rename to "03_refund_drivers"
+[0m18:37:59.404503 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.406505 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: COMMIT
+[0m18:37:59.406505 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.406505 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: COMMIT
+[0m18:37:59.409502 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.411529 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:37:59.411529 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+      drop view if exists "dev"."main"."03_refund_drivers__dbt_backup" cascade
+    
+[0m18:37:59.413527 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.414521 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: Close
+[0m18:37:59.415526 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C58CC090>]}
+[0m18:37:59.416502 [info ] [Thread-1 (]: 4 of 11 OK created sql table model main.03_refund_drivers ...................... [[32mOK[0m in 0.05s]
+[0m18:37:59.416502 [debug] [Thread-1 (]: Finished running node model.dbt_project.03_refund_drivers
+[0m18:37:59.417503 [debug] [Thread-1 (]: Began running node model.dbt_project.05_weekly_trends
+[0m18:37:59.417503 [info ] [Thread-1 (]: 5 of 11 START sql table model main.05_weekly_trends ............................ [RUN]
+[0m18:37:59.418504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.03_refund_drivers, now model.dbt_project.05_weekly_trends)
+[0m18:37:59.418504 [debug] [Thread-1 (]: Began compiling node model.dbt_project.05_weekly_trends
+[0m18:37:59.421502 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.05_weekly_trends"
+[0m18:37:59.421502 [debug] [Thread-1 (]: Began executing node model.dbt_project.05_weekly_trends
+[0m18:37:59.425504 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.05_weekly_trends"
+[0m18:37:59.426504 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.426504 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: BEGIN
+[0m18:37:59.426504 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.427503 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.427503 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.428502 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."05_weekly_trends__dbt_tmp"
+  
+    as (
+      SELECT
+    DATE_TRUNC('week', order_date) AS week,
+    COUNT(order_id) AS total_orders,
+    SUM(delivery_success_flag) AS completed_orders,
+    SUM(has_refund_flag) AS refunded_orders,
+    SUM(sla_breach_flag) AS breached_orders,
+    SUM(refund_amount) AS total_refund_amount
+FROM "dev"."main"."stg_order_facts"
+GROUP BY week
+ORDER BY week
+    );
+  
+  
+[0m18:37:59.436713 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m18:37:59.438713 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.438713 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '05_weekly_trends'
+  
+[0m18:37:59.439712 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.440712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.441712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '05_weekly_trends'
+  
+[0m18:37:59.442712 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.444720 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.445714 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+alter view "dev"."main"."05_weekly_trends" rename to "05_weekly_trends__dbt_backup"
+[0m18:37:59.446716 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.448716 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.449712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+alter table "dev"."main"."05_weekly_trends__dbt_tmp" rename to "05_weekly_trends"
+[0m18:37:59.449712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.451712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: COMMIT
+[0m18:37:59.451712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.451712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: COMMIT
+[0m18:37:59.453734 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.455713 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:37:59.455713 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+      drop view if exists "dev"."main"."05_weekly_trends__dbt_backup" cascade
+    
+[0m18:37:59.458712 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.459712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: Close
+[0m18:37:59.459712 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5ADB750>]}
+[0m18:37:59.460712 [info ] [Thread-1 (]: 5 of 11 OK created sql table model main.05_weekly_trends ....................... [[32mOK[0m in 0.04s]
+[0m18:37:59.461711 [debug] [Thread-1 (]: Finished running node model.dbt_project.05_weekly_trends
+[0m18:37:59.461711 [debug] [Thread-1 (]: Began running node model.dbt_project.int_restaurant_metrics
+[0m18:37:59.461711 [info ] [Thread-1 (]: 6 of 11 START sql table model main.int_restaurant_metrics ...................... [RUN]
+[0m18:37:59.462712 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.05_weekly_trends, now model.dbt_project.int_restaurant_metrics)
+[0m18:37:59.462712 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_restaurant_metrics
+[0m18:37:59.466735 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.467712 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_restaurant_metrics
+[0m18:37:59.469733 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.470712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.470712 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: BEGIN
+[0m18:37:59.471711 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.471711 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.472711 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.472711 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_restaurant_metrics__dbt_tmp"
+  
+    as (
+      SELECT
+    restaurant_id,
+    city,
+    COUNT(order_id) AS total_orders,
+    AVG(prep_delay_minutes) AS avg_prep_delay,
+    AVG(delay_minutes) AS avg_delivery_delay,
+    SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
+FROM "dev"."main"."stg_order_facts"
+GROUP BY restaurant_id, city
+    );
+  
+  
+[0m18:37:59.479711 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:37:59.480712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.480712 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_restaurant_metrics'
+  
+[0m18:37:59.481712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.482741 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.483735 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_restaurant_metrics'
+  
+[0m18:37:59.483735 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.486713 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.486713 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+alter view "dev"."main"."int_restaurant_metrics" rename to "int_restaurant_metrics__dbt_backup"
+[0m18:37:59.487712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.490712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.490712 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+alter table "dev"."main"."int_restaurant_metrics__dbt_tmp" rename to "int_restaurant_metrics"
+[0m18:37:59.491711 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.492730 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: COMMIT
+[0m18:37:59.492730 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.493712 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: COMMIT
+[0m18:37:59.496711 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.497727 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:37:59.498733 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+      drop view if exists "dev"."main"."int_restaurant_metrics__dbt_backup" cascade
+    
+[0m18:37:59.500711 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.501729 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: Close
+[0m18:37:59.501729 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C72FD450>]}
+[0m18:37:59.502732 [info ] [Thread-1 (]: 6 of 11 OK created sql table model main.int_restaurant_metrics ................. [[32mOK[0m in 0.04s]
+[0m18:37:59.502732 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_restaurant_metrics
+[0m18:37:59.503736 [debug] [Thread-1 (]: Began running node model.dbt_project.int_rider_metrics
+[0m18:37:59.503736 [info ] [Thread-1 (]: 7 of 11 START sql table model main.int_rider_metrics ........................... [RUN]
+[0m18:37:59.504711 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_restaurant_metrics, now model.dbt_project.int_rider_metrics)
+[0m18:37:59.504711 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_rider_metrics
+[0m18:37:59.506732 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_rider_metrics"
+[0m18:37:59.507711 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_rider_metrics
+[0m18:37:59.509730 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_rider_metrics"
+[0m18:37:59.510728 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.510728 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: BEGIN
+[0m18:37:59.511711 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.511711 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.512711 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.512711 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_rider_metrics__dbt_tmp"
+  
+    as (
+      SELECT
+    rider_id,
+    COUNT(order_id) AS total_orders,
+    SUM(sla_breach_flag) AS late_orders,
+    SUM(delivery_success_flag) AS successful_orders,
+    AVG(actual_delivery_minutes) AS avg_delivery_time,
+    AVG(delay_minutes) AS avg_delay_minutes
+FROM "dev"."main"."stg_order_facts"
+WHERE rider_id IS NOT NULL
+GROUP BY rider_id
+    );
+  
+  
+[0m18:37:59.514713 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.515734 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.515734 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_rider_metrics'
+  
+[0m18:37:59.516737 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.517732 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.517732 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_rider_metrics'
+  
+[0m18:37:59.518712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.520711 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.521712 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+alter view "dev"."main"."int_rider_metrics" rename to "int_rider_metrics__dbt_backup"
+[0m18:37:59.521712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.524735 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.524735 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+alter table "dev"."main"."int_rider_metrics__dbt_tmp" rename to "int_rider_metrics"
+[0m18:37:59.525712 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.526727 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: COMMIT
+[0m18:37:59.526727 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.526727 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: COMMIT
+[0m18:37:59.528712 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.530731 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:37:59.530731 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+      drop view if exists "dev"."main"."int_rider_metrics__dbt_backup" cascade
+    
+[0m18:37:59.532734 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.533728 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: Close
+[0m18:37:59.534713 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C596D690>]}
+[0m18:37:59.534713 [info ] [Thread-1 (]: 7 of 11 OK created sql table model main.int_rider_metrics ...................... [[32mOK[0m in 0.03s]
+[0m18:37:59.535713 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_rider_metrics
+[0m18:37:59.535713 [debug] [Thread-1 (]: Began running node model.dbt_project.int_sla_metrics
+[0m18:37:59.536713 [info ] [Thread-1 (]: 8 of 11 START sql table model main.int_sla_metrics ............................. [RUN]
+[0m18:37:59.536713 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_rider_metrics, now model.dbt_project.int_sla_metrics)
+[0m18:37:59.537714 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_sla_metrics
+[0m18:37:59.540736 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_sla_metrics"
+[0m18:37:59.541734 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_sla_metrics
+[0m18:37:59.543883 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_sla_metrics"
+[0m18:37:59.544883 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.545883 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: BEGIN
+[0m18:37:59.545883 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.546883 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.546883 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.546883 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_sla_metrics__dbt_tmp"
+  
+    as (
+      WITH base AS (
+    SELECT
+        order_id,
+        city,
+        order_hour,
+        actual_delivery_minutes,
+        delay_minutes,
+        sla_breach_flag,
+        prep_delay_minutes
+    FROM "dev"."main"."stg_order_facts"
+)
+SELECT
+    *,
+    
+    CASE
+        WHEN order_hour BETWEEN 11 AND 14 THEN 'LUNCH'
+        WHEN order_hour BETWEEN 18 AND 22 THEN 'DINNER'
+        ELSE 'OFF_PEAK'
+    END AS time_slot,
+    CASE
+        WHEN delay_minutes <= 0 THEN 'ON_TIME'
+        WHEN delay_minutes <= 10 THEN 'MINOR_DELAY'
+        ELSE 'MAJOR_DELAY'
+    END AS delay_bucket
+FROM base
+    );
+  
+  
+[0m18:37:59.553896 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m18:37:59.554896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.555898 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_sla_metrics'
+  
+[0m18:37:59.556898 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.557897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.557897 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_sla_metrics'
+  
+[0m18:37:59.558898 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.560997 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.561987 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+alter view "dev"."main"."int_sla_metrics" rename to "int_sla_metrics__dbt_backup"
+[0m18:37:59.561987 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.563897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.564902 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+alter table "dev"."main"."int_sla_metrics__dbt_tmp" rename to "int_sla_metrics"
+[0m18:37:59.564902 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.566912 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: COMMIT
+[0m18:37:59.566912 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.566912 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: COMMIT
+[0m18:37:59.570896 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:37:59.572924 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:37:59.572924 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+      drop view if exists "dev"."main"."int_sla_metrics__dbt_backup" cascade
+    
+[0m18:37:59.574920 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.575896 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: Close
+[0m18:37:59.576896 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C3B89C50>]}
+[0m18:37:59.576896 [info ] [Thread-1 (]: 8 of 11 OK created sql table model main.int_sla_metrics ........................ [[32mOK[0m in 0.04s]
+[0m18:37:59.577896 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_sla_metrics
+[0m18:37:59.577896 [debug] [Thread-1 (]: Began running node model.dbt_project.02_restaurants_prep_delay
+[0m18:37:59.578897 [info ] [Thread-1 (]: 9 of 11 START sql table model main.02_restaurants_prep_delay ................... [RUN]
+[0m18:37:59.578897 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_sla_metrics, now model.dbt_project.02_restaurants_prep_delay)
+[0m18:37:59.579897 [debug] [Thread-1 (]: Began compiling node model.dbt_project.02_restaurants_prep_delay
+[0m18:37:59.581898 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.582897 [debug] [Thread-1 (]: Began executing node model.dbt_project.02_restaurants_prep_delay
+[0m18:37:59.584913 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.585896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.585896 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: BEGIN
+[0m18:37:59.585896 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.586895 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.586895 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.586895 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."02_restaurants_prep_delay__dbt_tmp"
+  
+    as (
+      SELECT
+    restaurant_id,
+    city,
+    total_orders,
+    avg_prep_delay,
+    avg_delivery_delay,
+    breach_rate
+FROM "dev"."main"."int_restaurant_metrics"
+ORDER BY breach_rate DESC
+    );
+  
+  
+[0m18:37:59.588918 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.589896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.590895 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '02_restaurants_prep_delay'
+  
+[0m18:37:59.590895 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.591912 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.591912 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '02_restaurants_prep_delay'
+  
+[0m18:37:59.592915 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.594912 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.595911 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+alter view "dev"."main"."02_restaurants_prep_delay" rename to "02_restaurants_prep_delay__dbt_backup"
+[0m18:37:59.595911 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.597896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.598898 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+alter table "dev"."main"."02_restaurants_prep_delay__dbt_tmp" rename to "02_restaurants_prep_delay"
+[0m18:37:59.598898 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.600900 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: COMMIT
+[0m18:37:59.601897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.601897 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: COMMIT
+[0m18:37:59.603939 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.605897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:37:59.606897 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+      drop view if exists "dev"."main"."02_restaurants_prep_delay__dbt_backup" cascade
+    
+[0m18:37:59.609022 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.610008 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: Close
+[0m18:37:59.610008 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5AB4950>]}
+[0m18:37:59.611016 [info ] [Thread-1 (]: 9 of 11 OK created sql table model main.02_restaurants_prep_delay .............. [[32mOK[0m in 0.03s]
+[0m18:37:59.611897 [debug] [Thread-1 (]: Finished running node model.dbt_project.02_restaurants_prep_delay
+[0m18:37:59.611897 [debug] [Thread-1 (]: Began running node model.dbt_project.04_riders_performance
+[0m18:37:59.612898 [info ] [Thread-1 (]: 10 of 11 START sql table model main.04_riders_performance ...................... [RUN]
+[0m18:37:59.612898 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.02_restaurants_prep_delay, now model.dbt_project.04_riders_performance)
+[0m18:37:59.613935 [debug] [Thread-1 (]: Began compiling node model.dbt_project.04_riders_performance
+[0m18:37:59.617005 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.04_riders_performance"
+[0m18:37:59.618002 [debug] [Thread-1 (]: Began executing node model.dbt_project.04_riders_performance
+[0m18:37:59.620896 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.04_riders_performance"
+[0m18:37:59.621917 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.621917 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: BEGIN
+[0m18:37:59.622920 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.622920 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.623895 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.623895 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."04_riders_performance__dbt_tmp"
+  
+    as (
+      SELECT
+    rider_id,
+    total_orders,
+    late_orders,
+    successful_orders,
+    avg_delivery_time,
+    avg_delay_minutes,
+    late_orders * 1.0 / total_orders AS late_rate
+FROM "dev"."main"."int_rider_metrics"
+ORDER BY total_orders DESC
+    );
+  
+  
+[0m18:37:59.627896 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:37:59.630903 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.631897 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '04_riders_performance'
+  
+[0m18:37:59.632905 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.633897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.634897 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '04_riders_performance'
+  
+[0m18:37:59.635907 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.637897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.638896 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+alter view "dev"."main"."04_riders_performance" rename to "04_riders_performance__dbt_backup"
+[0m18:37:59.639942 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.641954 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.641954 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+alter table "dev"."main"."04_riders_performance__dbt_tmp" rename to "04_riders_performance"
+[0m18:37:59.643001 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.643995 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: COMMIT
+[0m18:37:59.644897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.644897 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: COMMIT
+[0m18:37:59.647021 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.648896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:37:59.648896 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+      drop view if exists "dev"."main"."04_riders_performance__dbt_backup" cascade
+    
+[0m18:37:59.650922 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.651898 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: Close
+[0m18:37:59.652898 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C5A9F250>]}
+[0m18:37:59.652898 [info ] [Thread-1 (]: 10 of 11 OK created sql table model main.04_riders_performance ................. [[32mOK[0m in 0.04s]
+[0m18:37:59.653898 [debug] [Thread-1 (]: Finished running node model.dbt_project.04_riders_performance
+[0m18:37:59.654898 [debug] [Thread-1 (]: Began running node model.dbt_project.01_SLA_breach_analysis
+[0m18:37:59.654898 [info ] [Thread-1 (]: 11 of 11 START sql table model main.01_SLA_breach_analysis ..................... [RUN]
+[0m18:37:59.655898 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.04_riders_performance, now model.dbt_project.01_SLA_breach_analysis)
+[0m18:37:59.655898 [debug] [Thread-1 (]: Began compiling node model.dbt_project.01_SLA_breach_analysis
+[0m18:37:59.657913 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.658906 [debug] [Thread-1 (]: Began executing node model.dbt_project.01_SLA_breach_analysis
+[0m18:37:59.660896 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.661914 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.662897 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: BEGIN
+[0m18:37:59.662897 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:37:59.663896 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:37:59.663896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.663896 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."01_SLA_breach_analysis__dbt_tmp"
+  
+    as (
+      SELECT
+    city,
+    time_slot,
+    COUNT(order_id) AS total_orders,
+    SUM(sla_breach_flag) AS breached_orders,
+    SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
+FROM "dev"."main"."int_sla_metrics"
+GROUP BY city, time_slot
+    );
+  
+  
+[0m18:37:59.667896 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:37:59.668897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.669925 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '01_SLA_breach_analysis'
+  
+[0m18:37:59.669925 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.670896 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.671921 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '01_SLA_breach_analysis'
+  
+[0m18:37:59.671921 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.674897 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.674897 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+alter view "dev"."main"."01_SLA_breach_analysis" rename to "01_SLA_breach_analysis__dbt_backup"
+[0m18:37:59.675896 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.677898 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.677898 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+alter table "dev"."main"."01_SLA_breach_analysis__dbt_tmp" rename to "01_SLA_breach_analysis"
+[0m18:37:59.678897 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:37:59.679898 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: COMMIT
+[0m18:37:59.679898 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.679898 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: COMMIT
+[0m18:37:59.681941 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.684013 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:37:59.684897 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+      drop view if exists "dev"."main"."01_SLA_breach_analysis__dbt_backup" cascade
+    
+[0m18:37:59.685896 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:37:59.686897 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: Close
+[0m18:37:59.687895 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '82d436cc-d9f7-45fd-8555-bed5ca1f93e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C72CB3D0>]}
+[0m18:37:59.687895 [info ] [Thread-1 (]: 11 of 11 OK created sql table model main.01_SLA_breach_analysis ................ [[32mOK[0m in 0.03s]
+[0m18:37:59.688895 [debug] [Thread-1 (]: Finished running node model.dbt_project.01_SLA_breach_analysis
+[0m18:37:59.690896 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:37:59.690896 [debug] [MainThread]: On master: BEGIN
+[0m18:37:59.690896 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:37:59.691897 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:37:59.691897 [debug] [MainThread]: On master: COMMIT
+[0m18:37:59.692897 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:37:59.692897 [debug] [MainThread]: On master: COMMIT
+[0m18:37:59.692897 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:37:59.693896 [debug] [MainThread]: On master: Close
+[0m18:37:59.693896 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:37:59.693896 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m18:37:59.694896 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m18:37:59.694896 [debug] [MainThread]: Connection 'model.dbt_project.01_SLA_breach_analysis' was properly closed.
+[0m18:37:59.694896 [info ] [MainThread]: 
+[0m18:37:59.695896 [info ] [MainThread]: Finished running 11 table models in 0 hours 0 minutes and 3.23 seconds (3.23s).
+[0m18:37:59.696896 [debug] [MainThread]: Command end result
+[0m18:37:59.713896 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:37:59.715897 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:37:59.720897 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DE_projects\food_del_pipeline\target\run_results.json
+[0m18:37:59.720897 [info ] [MainThread]: 
+[0m18:37:59.720897 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:37:59.721942 [info ] [MainThread]: 
+[0m18:37:59.722896 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=11
+[0m18:37:59.723896 [debug] [MainThread]: Command `dbt run` succeeded at 18:37:59.723896 after 7.06 seconds
+[0m18:37:59.723896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C414BC10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C413F790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000233C34D9990>]}
+[0m18:37:59.723896 [debug] [MainThread]: Flushing usage events
+[0m18:38:01.327331 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:38:03.001706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41DD08B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41DD0B910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41DD08810>]}
+
+
+============================== 18:38:03.005708 | 001d8c8a-8b93-48a5-859a-965359f7c264 ==============================
+[0m18:38:03.005708 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:38:03.006707 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt test --profiles-dir .', 'use_experimental_parser': 'False', 'log_path': 'C:\\DE_projects\\food_del_pipeline\\logs'}
+[0m18:38:03.169706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '001d8c8a-8b93-48a5-859a-965359f7c264', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41A73CD90>]}
+[0m18:38:03.218707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '001d8c8a-8b93-48a5-859a-965359f7c264', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41A45D150>]}
+[0m18:38:03.220707 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:38:03.372694 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m18:38:03.474713 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:38:03.474713 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:38:03.474713 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:38:03.503692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '001d8c8a-8b93-48a5-859a-965359f7c264', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41F2D3510>]}
+[0m18:38:03.558691 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:38:03.560693 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:38:03.586694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '001d8c8a-8b93-48a5-859a-965359f7c264', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41F543F50>]}
+[0m18:38:03.587694 [info ] [MainThread]: Found 11 models, 2 sources, 474 macros
+[0m18:38:03.587694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '001d8c8a-8b93-48a5-859a-965359f7c264', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41F1DFC90>]}
+[0m18:38:03.588693 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:38:03.590693 [debug] [MainThread]: Command end result
+[0m18:38:03.649707 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:38:03.651691 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:38:03.653715 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DE_projects\food_del_pipeline\target\run_results.json
+[0m18:38:03.654693 [debug] [MainThread]: Command `dbt test` succeeded at 18:38:03.654693 after 0.71 seconds
+[0m18:38:03.654693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B41DAAB750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B4171BC110>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B4171BD750>]}
+[0m18:38:03.655691 [debug] [MainThread]: Flushing usage events
+[0m18:38:04.691967 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:41:21.254228 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AA52B990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AA52BA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AA52B390>]}
+
+
+============================== 18:41:21.257245 | 6b4cbcb4-d612-451f-85fc-a579051cc7ca ==============================
+[0m18:41:21.257245 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:41:21.258232 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': '.', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --profiles-dir .', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\DE_projects\\food_del_pipeline\\logs'}
+[0m18:41:21.435311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AB5CB5D0>]}
+[0m18:41:21.478885 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A6CAF490>]}
+[0m18:41:21.480884 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:41:21.619970 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m18:41:21.711867 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m18:41:21.712871 [debug] [MainThread]: Partial parsing: updated file: dbt_project://dbt_project/models\marts\schema.yml
+[0m18:41:21.920906 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A79130D0>]}
+[0m18:41:21.980888 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:41:21.981887 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:41:21.999922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261ABD80050>]}
+[0m18:41:22.000980 [info ] [MainThread]: Found 11 models, 3 data tests, 2 sources, 474 macros
+[0m18:41:22.000980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A8AFFD10>]}
+[0m18:41:22.002919 [info ] [MainThread]: 
+[0m18:41:22.002919 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:41:22.003883 [info ] [MainThread]: 
+[0m18:41:22.003883 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:41:22.007882 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev'
+[0m18:41:22.050982 [debug] [ThreadPool]: Using duckdb connection "list_dev"
+[0m18:41:22.051994 [debug] [ThreadPool]: On list_dev: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_dev"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"dev"'
+    
+  
+  
+[0m18:41:22.051994 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:41:22.064982 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m18:41:22.065989 [debug] [ThreadPool]: On list_dev: Close
+[0m18:41:22.066882 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dev, now create_dev_main)
+[0m18:41:22.066882 [debug] [ThreadPool]: Creating schema "database: "dev"
+schema: "main"
+"
+[0m18:41:22.070889 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:41:22.071884 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='dev'
+        and type='sqlite'
+    
+  
+[0m18:41:22.071884 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:41:22.072993 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m18:41:22.073889 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:41:22.073889 [debug] [ThreadPool]: On create_dev_main: BEGIN
+[0m18:41:22.074882 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:41:22.074882 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:41:22.074882 [debug] [ThreadPool]: On create_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_dev_main"} */
+
+    
+    
+        create schema if not exists "dev"."main"
+    
+[0m18:41:22.075882 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:41:22.076882 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m18:41:22.076882 [debug] [ThreadPool]: Using duckdb connection "create_dev_main"
+[0m18:41:22.076882 [debug] [ThreadPool]: On create_dev_main: COMMIT
+[0m18:41:22.077933 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:41:22.077933 [debug] [ThreadPool]: On create_dev_main: Close
+[0m18:41:22.079910 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m18:41:22.083896 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:41:22.083896 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m18:41:22.083896 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:41:22.084880 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m18:41:22.084880 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:41:22.084880 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m18:41:22.088880 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:41:22.089882 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m18:41:22.090882 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m18:41:22.090882 [debug] [ThreadPool]: On list_dev_main: Close
+[0m18:41:22.092930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AB763290>]}
+[0m18:41:22.093882 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:22.093882 [debug] [MainThread]: On master: BEGIN
+[0m18:41:22.093882 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:41:22.094940 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:41:22.094940 [debug] [MainThread]: On master: COMMIT
+[0m18:41:22.095881 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:22.095881 [debug] [MainThread]: On master: COMMIT
+[0m18:41:22.095881 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:41:22.095881 [debug] [MainThread]: On master: Close
+[0m18:41:22.098487 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_delivery_timeline
+[0m18:41:22.099487 [info ] [Thread-1 (]: 1 of 11 START sql table model main.stg_delivery_timeline ....................... [RUN]
+[0m18:41:22.100491 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.stg_delivery_timeline'
+[0m18:41:22.100491 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_delivery_timeline
+[0m18:41:22.104508 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.106487 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_delivery_timeline
+[0m18:41:22.129484 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.129484 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.129484 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: BEGIN
+[0m18:41:22.130925 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:41:22.130925 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.132187 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.132187 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_delivery_timeline__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/delivery_timeline.parquet')
+    );
+  
+  
+[0m18:41:22.137217 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:41:22.140215 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.141215 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_delivery_timeline'
+  
+[0m18:41:22.142201 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.143201 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.143201 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_delivery_timeline'
+  
+[0m18:41:22.144201 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.148200 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.148200 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+alter table "dev"."main"."stg_delivery_timeline" rename to "stg_delivery_timeline__dbt_backup"
+[0m18:41:22.149201 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.152201 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.152201 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+alter table "dev"."main"."stg_delivery_timeline__dbt_tmp" rename to "stg_delivery_timeline"
+[0m18:41:22.153201 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.163309 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: COMMIT
+[0m18:41:22.163309 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.163309 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: COMMIT
+[0m18:41:22.167202 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:41:22.171313 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_delivery_timeline"
+[0m18:41:22.171313 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_delivery_timeline"} */
+
+      drop table if exists "dev"."main"."stg_delivery_timeline__dbt_backup" cascade
+    
+[0m18:41:22.173461 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.174790 [debug] [Thread-1 (]: On model.dbt_project.stg_delivery_timeline: Close
+[0m18:41:22.176794 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC0F2590>]}
+[0m18:41:22.177793 [info ] [Thread-1 (]: 1 of 11 OK created sql table model main.stg_delivery_timeline .................. [[32mOK[0m in 0.08s]
+[0m18:41:22.177793 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_delivery_timeline
+[0m18:41:22.178795 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_order_facts
+[0m18:41:22.178795 [info ] [Thread-1 (]: 2 of 11 START sql table model main.stg_order_facts ............................. [RUN]
+[0m18:41:22.179807 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_delivery_timeline, now model.dbt_project.stg_order_facts)
+[0m18:41:22.179807 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_order_facts
+[0m18:41:22.181800 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_order_facts"
+[0m18:41:22.181800 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_order_facts
+[0m18:41:22.185103 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_order_facts"
+[0m18:41:22.185921 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.185921 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: BEGIN
+[0m18:41:22.185921 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.186971 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.187476 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.187476 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_order_facts__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/order_facts.parquet')
+    );
+  
+  
+[0m18:41:22.212862 [debug] [Thread-1 (]: SQL status: OK in 0.024 seconds
+[0m18:41:22.212862 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.213997 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_order_facts'
+  
+[0m18:41:22.213997 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.215240 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.216585 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_order_facts'
+  
+[0m18:41:22.216585 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.219184 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.220191 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+alter table "dev"."main"."stg_order_facts" rename to "stg_order_facts__dbt_backup"
+[0m18:41:22.221193 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.223211 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.223211 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+alter table "dev"."main"."stg_order_facts__dbt_tmp" rename to "stg_order_facts"
+[0m18:41:22.224539 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.225543 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: COMMIT
+[0m18:41:22.225543 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.226557 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: COMMIT
+[0m18:41:22.232658 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m18:41:22.234694 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_facts"
+[0m18:41:22.234694 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_facts"} */
+
+      drop table if exists "dev"."main"."stg_order_facts__dbt_backup" cascade
+    
+[0m18:41:22.236675 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.237687 [debug] [Thread-1 (]: On model.dbt_project.stg_order_facts: Close
+[0m18:41:22.237687 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC0EB510>]}
+[0m18:41:22.239089 [info ] [Thread-1 (]: 2 of 11 OK created sql table model main.stg_order_facts ........................ [[32mOK[0m in 0.06s]
+[0m18:41:22.239595 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_order_facts
+[0m18:41:22.239595 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_orders
+[0m18:41:22.240622 [info ] [Thread-1 (]: 3 of 11 START sql table model main.stg_orders .................................. [RUN]
+[0m18:41:22.240622 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_order_facts, now model.dbt_project.stg_orders)
+[0m18:41:22.240622 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_orders
+[0m18:41:22.243157 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m18:41:22.243157 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_orders
+[0m18:41:22.246017 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_orders"
+[0m18:41:22.247281 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.247281 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: BEGIN
+[0m18:41:22.248281 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.249279 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.249279 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.249279 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."stg_orders__dbt_tmp"
+  
+    as (
+      SELECT *
+FROM read_parquet('../data/silver/orders.parquet')
+    );
+  
+  
+[0m18:41:22.258295 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m18:41:22.260280 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.260280 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_orders'
+  
+[0m18:41:22.262280 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.262280 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.263281 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_orders'
+  
+[0m18:41:22.264280 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.267286 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.268284 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter table "dev"."main"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m18:41:22.269284 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.270302 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.271294 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter table "dev"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m18:41:22.272283 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.273303 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m18:41:22.273303 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.274286 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m18:41:22.278281 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:41:22.280616 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m18:41:22.281669 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+      drop table if exists "dev"."main"."stg_orders__dbt_backup" cascade
+    
+[0m18:41:22.283680 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.284679 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: Close
+[0m18:41:22.284679 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AE211050>]}
+[0m18:41:22.285680 [info ] [Thread-1 (]: 3 of 11 OK created sql table model main.stg_orders ............................. [[32mOK[0m in 0.04s]
+[0m18:41:22.286682 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_orders
+[0m18:41:22.286682 [debug] [Thread-1 (]: Began running node model.dbt_project.03_refund_drivers
+[0m18:41:22.287676 [info ] [Thread-1 (]: 4 of 11 START sql table model main.03_refund_drivers ........................... [RUN]
+[0m18:41:22.287676 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_orders, now model.dbt_project.03_refund_drivers)
+[0m18:41:22.288675 [debug] [Thread-1 (]: Began compiling node model.dbt_project.03_refund_drivers
+[0m18:41:22.290675 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.03_refund_drivers"
+[0m18:41:22.291676 [debug] [Thread-1 (]: Began executing node model.dbt_project.03_refund_drivers
+[0m18:41:22.294675 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.03_refund_drivers"
+[0m18:41:22.295678 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.296678 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: BEGIN
+[0m18:41:22.296678 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.297725 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.298685 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.299680 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."03_refund_drivers__dbt_tmp"
+  
+    as (
+      SELECT
+    CASE
+        WHEN sla_breach_flag = 1 THEN 'DELAY'
+        WHEN delivery_success_flag = 0 THEN 'CANCELLATION'
+        ELSE 'OTHER'
+    END AS refund_reason,
+    COUNT(order_id) AS total_orders,
+    SUM(has_refund_flag) AS refunded_orders,
+    SUM(has_refund_flag) * 1.0 / COUNT(order_id) AS refund_rate
+FROM "dev"."main"."stg_order_facts"
+GROUP BY refund_reason
+    );
+  
+  
+[0m18:41:22.303674 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:41:22.304695 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.305690 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '03_refund_drivers'
+  
+[0m18:41:22.306689 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.307690 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.308675 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '03_refund_drivers'
+  
+[0m18:41:22.309693 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.314691 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.315678 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+alter table "dev"."main"."03_refund_drivers" rename to "03_refund_drivers__dbt_backup"
+[0m18:41:22.316673 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.320689 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.321677 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+alter table "dev"."main"."03_refund_drivers__dbt_tmp" rename to "03_refund_drivers"
+[0m18:41:22.323690 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.326677 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: COMMIT
+[0m18:41:22.327681 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.328678 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: COMMIT
+[0m18:41:22.331674 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.333690 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.03_refund_drivers"
+[0m18:41:22.333690 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.03_refund_drivers"} */
+
+      drop table if exists "dev"."main"."03_refund_drivers__dbt_backup" cascade
+    
+[0m18:41:22.335676 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.337690 [debug] [Thread-1 (]: On model.dbt_project.03_refund_drivers: Close
+[0m18:41:22.338673 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AE213A10>]}
+[0m18:41:22.338673 [info ] [Thread-1 (]: 4 of 11 OK created sql table model main.03_refund_drivers ...................... [[32mOK[0m in 0.05s]
+[0m18:41:22.339689 [debug] [Thread-1 (]: Finished running node model.dbt_project.03_refund_drivers
+[0m18:41:22.340694 [debug] [Thread-1 (]: Began running node model.dbt_project.05_weekly_trends
+[0m18:41:22.341690 [info ] [Thread-1 (]: 5 of 11 START sql table model main.05_weekly_trends ............................ [RUN]
+[0m18:41:22.342673 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.03_refund_drivers, now model.dbt_project.05_weekly_trends)
+[0m18:41:22.342673 [debug] [Thread-1 (]: Began compiling node model.dbt_project.05_weekly_trends
+[0m18:41:22.345690 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.05_weekly_trends"
+[0m18:41:22.346675 [debug] [Thread-1 (]: Began executing node model.dbt_project.05_weekly_trends
+[0m18:41:22.348689 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.05_weekly_trends"
+[0m18:41:22.349673 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.349673 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: BEGIN
+[0m18:41:22.350690 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.350690 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.351673 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.351673 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."05_weekly_trends__dbt_tmp"
+  
+    as (
+      SELECT
+    DATE_TRUNC('week', order_date) AS week,
+    COUNT(order_id) AS total_orders,
+    SUM(delivery_success_flag) AS completed_orders,
+    SUM(has_refund_flag) AS refunded_orders,
+    SUM(sla_breach_flag) AS breached_orders,
+    SUM(refund_amount) AS total_refund_amount
+FROM "dev"."main"."stg_order_facts"
+GROUP BY week
+ORDER BY week
+    );
+  
+  
+[0m18:41:22.354674 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:41:22.355691 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.356676 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '05_weekly_trends'
+  
+[0m18:41:22.357676 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.358676 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.359675 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '05_weekly_trends'
+  
+[0m18:41:22.360675 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.364691 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.364691 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+alter table "dev"."main"."05_weekly_trends" rename to "05_weekly_trends__dbt_backup"
+[0m18:41:22.365674 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.368690 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.368690 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+alter table "dev"."main"."05_weekly_trends__dbt_tmp" rename to "05_weekly_trends"
+[0m18:41:22.369697 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.371713 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: COMMIT
+[0m18:41:22.372712 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.372712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: COMMIT
+[0m18:41:22.374741 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.376726 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.05_weekly_trends"
+[0m18:41:22.377725 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.05_weekly_trends"} */
+
+      drop table if exists "dev"."main"."05_weekly_trends__dbt_backup" cascade
+    
+[0m18:41:22.379713 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.380712 [debug] [Thread-1 (]: On model.dbt_project.05_weekly_trends: Close
+[0m18:41:22.381735 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC1DD2D0>]}
+[0m18:41:22.382710 [info ] [Thread-1 (]: 5 of 11 OK created sql table model main.05_weekly_trends ....................... [[32mOK[0m in 0.04s]
+[0m18:41:22.383712 [debug] [Thread-1 (]: Finished running node model.dbt_project.05_weekly_trends
+[0m18:41:22.383712 [debug] [Thread-1 (]: Began running node model.dbt_project.int_restaurant_metrics
+[0m18:41:22.385235 [info ] [Thread-1 (]: 6 of 11 START sql table model main.int_restaurant_metrics ...................... [RUN]
+[0m18:41:22.386255 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.05_weekly_trends, now model.dbt_project.int_restaurant_metrics)
+[0m18:41:22.386255 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_restaurant_metrics
+[0m18:41:22.389269 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.389269 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_restaurant_metrics
+[0m18:41:22.392254 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.393253 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.393253 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: BEGIN
+[0m18:41:22.394253 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.394253 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.395253 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.395253 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_restaurant_metrics__dbt_tmp"
+  
+    as (
+      SELECT
+    restaurant_id,
+    city,
+    COUNT(order_id) AS total_orders,
+    AVG(prep_delay_minutes) AS avg_prep_delay,
+    AVG(delay_minutes) AS avg_delivery_delay,
+    SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
+FROM "dev"."main"."stg_order_facts"
+GROUP BY restaurant_id, city
+    );
+  
+  
+[0m18:41:22.401268 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m18:41:22.402254 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.403253 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_restaurant_metrics'
+  
+[0m18:41:22.403253 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.404254 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.405254 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_restaurant_metrics'
+  
+[0m18:41:22.406255 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.408271 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.409268 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+alter table "dev"."main"."int_restaurant_metrics" rename to "int_restaurant_metrics__dbt_backup"
+[0m18:41:22.409268 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.411268 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.412267 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+alter table "dev"."main"."int_restaurant_metrics__dbt_tmp" rename to "int_restaurant_metrics"
+[0m18:41:22.412267 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.414251 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: COMMIT
+[0m18:41:22.414251 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.414251 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: COMMIT
+[0m18:41:22.417269 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.418268 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_restaurant_metrics"
+[0m18:41:22.419267 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_restaurant_metrics"} */
+
+      drop table if exists "dev"."main"."int_restaurant_metrics__dbt_backup" cascade
+    
+[0m18:41:22.421267 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.422251 [debug] [Thread-1 (]: On model.dbt_project.int_restaurant_metrics: Close
+[0m18:41:22.422251 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC1DD2D0>]}
+[0m18:41:22.423253 [info ] [Thread-1 (]: 6 of 11 OK created sql table model main.int_restaurant_metrics ................. [[32mOK[0m in 0.04s]
+[0m18:41:22.424251 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_restaurant_metrics
+[0m18:41:22.424251 [debug] [Thread-1 (]: Began running node model.dbt_project.int_rider_metrics
+[0m18:41:22.425250 [info ] [Thread-1 (]: 7 of 11 START sql table model main.int_rider_metrics ........................... [RUN]
+[0m18:41:22.425250 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_restaurant_metrics, now model.dbt_project.int_rider_metrics)
+[0m18:41:22.426260 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_rider_metrics
+[0m18:41:22.428251 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_rider_metrics"
+[0m18:41:22.429250 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_rider_metrics
+[0m18:41:22.431268 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_rider_metrics"
+[0m18:41:22.432251 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.432251 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: BEGIN
+[0m18:41:22.432251 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.433267 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.433267 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.433267 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_rider_metrics__dbt_tmp"
+  
+    as (
+      SELECT
+    rider_id,
+    COUNT(order_id) AS total_orders,
+    SUM(sla_breach_flag) AS late_orders,
+    SUM(delivery_success_flag) AS successful_orders,
+    AVG(actual_delivery_minutes) AS avg_delivery_time,
+    AVG(delay_minutes) AS avg_delay_minutes
+FROM "dev"."main"."stg_order_facts"
+WHERE rider_id IS NOT NULL
+GROUP BY rider_id
+    );
+  
+  
+[0m18:41:22.435250 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.436252 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.436252 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_rider_metrics'
+  
+[0m18:41:22.437251 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.438251 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.439268 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_rider_metrics'
+  
+[0m18:41:22.440252 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.442252 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.443268 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+alter table "dev"."main"."int_rider_metrics" rename to "int_rider_metrics__dbt_backup"
+[0m18:41:22.443268 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.447251 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.447251 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+alter table "dev"."main"."int_rider_metrics__dbt_tmp" rename to "int_rider_metrics"
+[0m18:41:22.448269 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.449267 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: COMMIT
+[0m18:41:22.449267 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.449267 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: COMMIT
+[0m18:41:22.451251 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.453267 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_rider_metrics"
+[0m18:41:22.453267 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_rider_metrics"} */
+
+      drop table if exists "dev"."main"."int_rider_metrics__dbt_backup" cascade
+    
+[0m18:41:22.455272 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.456268 [debug] [Thread-1 (]: On model.dbt_project.int_rider_metrics: Close
+[0m18:41:22.456268 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AE278990>]}
+[0m18:41:22.457251 [info ] [Thread-1 (]: 7 of 11 OK created sql table model main.int_rider_metrics ...................... [[32mOK[0m in 0.03s]
+[0m18:41:22.457251 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_rider_metrics
+[0m18:41:22.458270 [debug] [Thread-1 (]: Began running node model.dbt_project.int_sla_metrics
+[0m18:41:22.458270 [info ] [Thread-1 (]: 8 of 11 START sql table model main.int_sla_metrics ............................. [RUN]
+[0m18:41:22.459268 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_rider_metrics, now model.dbt_project.int_sla_metrics)
+[0m18:41:22.459268 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_sla_metrics
+[0m18:41:22.461255 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_sla_metrics"
+[0m18:41:22.462256 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_sla_metrics
+[0m18:41:22.464360 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_sla_metrics"
+[0m18:41:22.464360 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.465713 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: BEGIN
+[0m18:41:22.465713 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.465713 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.466717 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.466717 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."int_sla_metrics__dbt_tmp"
+  
+    as (
+      WITH base AS (
+    SELECT
+        order_id,
+        city,
+        order_hour,
+        actual_delivery_minutes,
+        delay_minutes,
+        sla_breach_flag,
+        prep_delay_minutes
+    FROM "dev"."main"."stg_order_facts"
+)
+SELECT
+    *,
+    
+    CASE
+        WHEN order_hour BETWEEN 11 AND 14 THEN 'LUNCH'
+        WHEN order_hour BETWEEN 18 AND 22 THEN 'DINNER'
+        ELSE 'OFF_PEAK'
+    END AS time_slot,
+    CASE
+        WHEN delay_minutes <= 0 THEN 'ON_TIME'
+        WHEN delay_minutes <= 10 THEN 'MINOR_DELAY'
+        ELSE 'MAJOR_DELAY'
+    END AS delay_bucket
+FROM base
+    );
+  
+  
+[0m18:41:22.471733 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m18:41:22.472717 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.473733 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_sla_metrics'
+  
+[0m18:41:22.473733 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.474718 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.475736 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_sla_metrics'
+  
+[0m18:41:22.476755 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.479275 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.479275 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+alter table "dev"."main"."int_sla_metrics" rename to "int_sla_metrics__dbt_backup"
+[0m18:41:22.480312 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.482273 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.482273 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+alter table "dev"."main"."int_sla_metrics__dbt_tmp" rename to "int_sla_metrics"
+[0m18:41:22.483372 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.484398 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: COMMIT
+[0m18:41:22.484398 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.485380 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: COMMIT
+[0m18:41:22.488516 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:41:22.490517 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_sla_metrics"
+[0m18:41:22.490517 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_sla_metrics"} */
+
+      drop table if exists "dev"."main"."int_sla_metrics__dbt_backup" cascade
+    
+[0m18:41:22.494026 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.495026 [debug] [Thread-1 (]: On model.dbt_project.int_sla_metrics: Close
+[0m18:41:22.495026 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC21A210>]}
+[0m18:41:22.496009 [info ] [Thread-1 (]: 8 of 11 OK created sql table model main.int_sla_metrics ........................ [[32mOK[0m in 0.04s]
+[0m18:41:22.497025 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_sla_metrics
+[0m18:41:22.497025 [debug] [Thread-1 (]: Began running node model.dbt_project.02_restaurants_prep_delay
+[0m18:41:22.498229 [info ] [Thread-1 (]: 9 of 11 START sql table model main.02_restaurants_prep_delay ................... [RUN]
+[0m18:41:22.498229 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.int_sla_metrics, now model.dbt_project.02_restaurants_prep_delay)
+[0m18:41:22.499236 [debug] [Thread-1 (]: Began compiling node model.dbt_project.02_restaurants_prep_delay
+[0m18:41:22.501236 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.501236 [debug] [Thread-1 (]: Began executing node model.dbt_project.02_restaurants_prep_delay
+[0m18:41:22.504258 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.505264 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.505264 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: BEGIN
+[0m18:41:22.505264 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.506242 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.506242 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.507234 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."02_restaurants_prep_delay__dbt_tmp"
+  
+    as (
+      SELECT
+    restaurant_id,
+    city,
+    total_orders,
+    avg_prep_delay,
+    avg_delivery_delay,
+    breach_rate
+FROM "dev"."main"."int_restaurant_metrics"
+ORDER BY breach_rate DESC
+    );
+  
+  
+[0m18:41:22.508234 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.508234 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.509642 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '02_restaurants_prep_delay'
+  
+[0m18:41:22.509642 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.510648 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.511648 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '02_restaurants_prep_delay'
+  
+[0m18:41:22.511648 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.514735 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.514735 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+alter table "dev"."main"."02_restaurants_prep_delay" rename to "02_restaurants_prep_delay__dbt_backup"
+[0m18:41:22.515764 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.518741 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.518741 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+alter table "dev"."main"."02_restaurants_prep_delay__dbt_tmp" rename to "02_restaurants_prep_delay"
+[0m18:41:22.519742 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.520741 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: COMMIT
+[0m18:41:22.521756 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.521756 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: COMMIT
+[0m18:41:22.523740 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.525758 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.02_restaurants_prep_delay"
+[0m18:41:22.525758 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.02_restaurants_prep_delay"} */
+
+      drop table if exists "dev"."main"."02_restaurants_prep_delay__dbt_backup" cascade
+    
+[0m18:41:22.527757 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.528757 [debug] [Thread-1 (]: On model.dbt_project.02_restaurants_prep_delay: Close
+[0m18:41:22.528757 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC117A90>]}
+[0m18:41:22.529756 [info ] [Thread-1 (]: 9 of 11 OK created sql table model main.02_restaurants_prep_delay .............. [[32mOK[0m in 0.03s]
+[0m18:41:22.530742 [debug] [Thread-1 (]: Finished running node model.dbt_project.02_restaurants_prep_delay
+[0m18:41:22.530742 [debug] [Thread-1 (]: Began running node model.dbt_project.04_riders_performance
+[0m18:41:22.530742 [info ] [Thread-1 (]: 10 of 11 START sql table model main.04_riders_performance ...................... [RUN]
+[0m18:41:22.531741 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.02_restaurants_prep_delay, now model.dbt_project.04_riders_performance)
+[0m18:41:22.531741 [debug] [Thread-1 (]: Began compiling node model.dbt_project.04_riders_performance
+[0m18:41:22.534757 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.04_riders_performance"
+[0m18:41:22.534757 [debug] [Thread-1 (]: Began executing node model.dbt_project.04_riders_performance
+[0m18:41:22.537739 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.04_riders_performance"
+[0m18:41:22.538741 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.539742 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: BEGIN
+[0m18:41:22.539742 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.539742 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.540742 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.540742 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."04_riders_performance__dbt_tmp"
+  
+    as (
+      SELECT
+    rider_id,
+    total_orders,
+    late_orders,
+    successful_orders,
+    avg_delivery_time,
+    avg_delay_minutes,
+    late_orders * 1.0 / total_orders AS late_rate
+FROM "dev"."main"."int_rider_metrics"
+ORDER BY total_orders DESC
+    );
+  
+  
+[0m18:41:22.542741 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.542741 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.543742 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '04_riders_performance'
+  
+[0m18:41:22.543742 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.544779 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.545764 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '04_riders_performance'
+  
+[0m18:41:22.546742 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.548743 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.549740 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+alter table "dev"."main"."04_riders_performance" rename to "04_riders_performance__dbt_backup"
+[0m18:41:22.549740 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.551740 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.552741 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+alter table "dev"."main"."04_riders_performance__dbt_tmp" rename to "04_riders_performance"
+[0m18:41:22.553745 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.554763 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: COMMIT
+[0m18:41:22.554763 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.554763 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: COMMIT
+[0m18:41:22.559075 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m18:41:22.561072 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.04_riders_performance"
+[0m18:41:22.561072 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.04_riders_performance"} */
+
+      drop table if exists "dev"."main"."04_riders_performance__dbt_backup" cascade
+    
+[0m18:41:22.563068 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.565084 [debug] [Thread-1 (]: On model.dbt_project.04_riders_performance: Close
+[0m18:41:22.565084 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AC1C8090>]}
+[0m18:41:22.566091 [info ] [Thread-1 (]: 10 of 11 OK created sql table model main.04_riders_performance ................. [[32mOK[0m in 0.03s]
+[0m18:41:22.567070 [debug] [Thread-1 (]: Finished running node model.dbt_project.04_riders_performance
+[0m18:41:22.567070 [debug] [Thread-1 (]: Began running node model.dbt_project.01_SLA_breach_analysis
+[0m18:41:22.567070 [info ] [Thread-1 (]: 11 of 11 START sql table model main.01_SLA_breach_analysis ..................... [RUN]
+[0m18:41:22.568090 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.04_riders_performance, now model.dbt_project.01_SLA_breach_analysis)
+[0m18:41:22.568090 [debug] [Thread-1 (]: Began compiling node model.dbt_project.01_SLA_breach_analysis
+[0m18:41:22.570069 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.571070 [debug] [Thread-1 (]: Began executing node model.dbt_project.01_SLA_breach_analysis
+[0m18:41:22.574177 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.575068 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.575068 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: BEGIN
+[0m18:41:22.575068 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:22.576117 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.576117 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.576117 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+  
+    
+    
+
+    create  table
+      "dev"."main"."01_SLA_breach_analysis__dbt_tmp"
+  
+    as (
+      SELECT
+    city,
+    time_slot,
+    COUNT(order_id) AS total_orders,
+    SUM(sla_breach_flag) AS breached_orders,
+    SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
+FROM "dev"."main"."int_sla_metrics"
+GROUP BY city, time_slot
+    );
+  
+  
+[0m18:41:22.581068 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m18:41:22.582085 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.582085 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '01_SLA_breach_analysis'
+  
+[0m18:41:22.583070 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.584084 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.585086 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = '01_SLA_breach_analysis'
+  
+[0m18:41:22.585086 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.588068 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.588068 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+alter table "dev"."main"."01_SLA_breach_analysis" rename to "01_SLA_breach_analysis__dbt_backup"
+[0m18:41:22.589068 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.592069 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.592069 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+alter table "dev"."main"."01_SLA_breach_analysis__dbt_tmp" rename to "01_SLA_breach_analysis"
+[0m18:41:22.593069 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:22.594171 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: COMMIT
+[0m18:41:22.594171 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.595151 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: COMMIT
+[0m18:41:22.597072 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:22.598082 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.01_SLA_breach_analysis"
+[0m18:41:22.598082 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.01_SLA_breach_analysis"} */
+
+      drop table if exists "dev"."main"."01_SLA_breach_analysis__dbt_backup" cascade
+    
+[0m18:41:22.601085 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:22.602084 [debug] [Thread-1 (]: On model.dbt_project.01_SLA_breach_analysis: Close
+[0m18:41:22.602084 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6b4cbcb4-d612-451f-85fc-a579051cc7ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261AE2A82D0>]}
+[0m18:41:22.603066 [info ] [Thread-1 (]: 11 of 11 OK created sql table model main.01_SLA_breach_analysis ................ [[32mOK[0m in 0.03s]
+[0m18:41:22.603066 [debug] [Thread-1 (]: Finished running node model.dbt_project.01_SLA_breach_analysis
+[0m18:41:22.604085 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:22.605072 [debug] [MainThread]: On master: BEGIN
+[0m18:41:22.605072 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:41:22.605072 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:41:22.606067 [debug] [MainThread]: On master: COMMIT
+[0m18:41:22.606067 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:22.606067 [debug] [MainThread]: On master: COMMIT
+[0m18:41:22.607068 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:41:22.607068 [debug] [MainThread]: On master: Close
+[0m18:41:22.607068 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:41:22.608086 [debug] [MainThread]: Connection 'create_dev_main' was properly closed.
+[0m18:41:22.608086 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m18:41:22.608086 [debug] [MainThread]: Connection 'model.dbt_project.01_SLA_breach_analysis' was properly closed.
+[0m18:41:22.609067 [info ] [MainThread]: 
+[0m18:41:22.609067 [info ] [MainThread]: Finished running 11 table models in 0 hours 0 minutes and 0.60 seconds (0.60s).
+[0m18:41:22.612073 [debug] [MainThread]: Command end result
+[0m18:41:22.630178 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:41:22.632097 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:41:22.637092 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DE_projects\food_del_pipeline\target\run_results.json
+[0m18:41:22.637092 [info ] [MainThread]: 
+[0m18:41:22.638128 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:41:22.638128 [info ] [MainThread]: 
+[0m18:41:22.639068 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=11
+[0m18:41:22.640068 [debug] [MainThread]: Command `dbt run` succeeded at 18:41:22.640068 after 1.45 seconds
+[0m18:41:22.640068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3981E90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3946ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000261A3947CD0>]}
+[0m18:41:22.641067 [debug] [MainThread]: Flushing usage events
+[0m18:41:24.215736 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:41:25.963781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020717EA9150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020717EA7BD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020718EA7D10>]}
+
+
+============================== 18:41:25.967784 | 2dc623aa-2f7f-4b1d-bed0-090b64139009 ==============================
+[0m18:41:25.967784 [info ] [MainThread]: Running with dbt=1.11.7
+[0m18:41:25.968785 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': '.', 'invocation_command': 'dbt test --profiles-dir .', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\DE_projects\\food_del_pipeline\\logs'}
+[0m18:41:26.142980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020718F441D0>]}
+[0m18:41:26.184982 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207145EF110>]}
+[0m18:41:26.186982 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m18:41:26.357983 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m18:41:26.473512 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:41:26.474511 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:41:26.474511 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:41:26.506511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207195B0B10>]}
+[0m18:41:26.564600 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:41:26.566498 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:41:26.632496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020718EB5F50>]}
+[0m18:41:26.633497 [info ] [MainThread]: Found 11 models, 3 data tests, 2 sources, 474 macros
+[0m18:41:26.633497 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207195F9DD0>]}
+[0m18:41:26.635514 [info ] [MainThread]: 
+[0m18:41:26.635514 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:41:26.636495 [info ] [MainThread]: 
+[0m18:41:26.636495 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m18:41:26.640495 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_dev_main'
+[0m18:41:26.687931 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:41:26.687931 [debug] [ThreadPool]: On list_dev_main: BEGIN
+[0m18:41:26.687931 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:41:26.724927 [debug] [ThreadPool]: SQL status: OK in 0.036 seconds
+[0m18:41:26.724927 [debug] [ThreadPool]: Using duckdb connection "list_dev_main"
+[0m18:41:26.725929 [debug] [ThreadPool]: On list_dev_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_dev_main"} */
+select
+      'dev' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'dev'
+  
+[0m18:41:26.728928 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m18:41:26.729929 [debug] [ThreadPool]: On list_dev_main: ROLLBACK
+[0m18:41:26.730928 [debug] [ThreadPool]: Failed to rollback 'list_dev_main'
+[0m18:41:26.730928 [debug] [ThreadPool]: On list_dev_main: Close
+[0m18:41:26.732928 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2dc623aa-2f7f-4b1d-bed0-090b64139009', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020719600610>]}
+[0m18:41:26.732928 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:26.733928 [debug] [MainThread]: On master: BEGIN
+[0m18:41:26.733928 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:41:26.734929 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:41:26.734929 [debug] [MainThread]: On master: COMMIT
+[0m18:41:26.734929 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:26.735929 [debug] [MainThread]: On master: COMMIT
+[0m18:41:26.735929 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:41:26.735929 [debug] [MainThread]: On master: Close
+[0m18:41:26.739928 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24
+[0m18:41:26.739928 [info ] [Thread-1 (]: 1 of 3 START test not_null_01_SLA_breach_analysis_city ......................... [RUN]
+[0m18:41:26.740927 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24'
+[0m18:41:26.740927 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24
+[0m18:41:26.753929 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24"
+[0m18:41:26.754928 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24
+[0m18:41:26.767928 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24"
+[0m18:41:26.768929 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24"
+[0m18:41:26.769928 [debug] [Thread-1 (]: On test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24: BEGIN
+[0m18:41:26.769928 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m18:41:26.770929 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:26.770929 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24"
+[0m18:41:26.770929 [debug] [Thread-1 (]: On test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select city
+from "dev"."main"."01_SLA_breach_analysis"
+where city is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:41:26.773928 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m18:41:26.776928 [debug] [Thread-1 (]: On test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24: ROLLBACK
+[0m18:41:26.776928 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24'
+[0m18:41:26.777928 [debug] [Thread-1 (]: On test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24: Close
+[0m18:41:26.777928 [info ] [Thread-1 (]: 1 of 3 PASS not_null_01_SLA_breach_analysis_city ............................... [[32mPASS[0m in 0.04s]
+[0m18:41:26.778927 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24
+[0m18:41:26.778927 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9
+[0m18:41:26.779927 [info ] [Thread-1 (]: 2 of 3 START test not_null_04_riders_performance_rider_id ...................... [RUN]
+[0m18:41:26.780927 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_project.not_null_01_SLA_breach_analysis_city.7c70c8dd24, now test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9)
+[0m18:41:26.780927 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9
+[0m18:41:26.783943 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9"
+[0m18:41:26.784928 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9
+[0m18:41:26.785961 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9"
+[0m18:41:26.786943 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9"
+[0m18:41:26.787927 [debug] [Thread-1 (]: On test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9: BEGIN
+[0m18:41:26.787927 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:26.787927 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:26.788926 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9"
+[0m18:41:26.788926 [debug] [Thread-1 (]: On test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select rider_id
+from "dev"."main"."04_riders_performance"
+where rider_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:41:26.789926 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m18:41:26.790926 [debug] [Thread-1 (]: On test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9: ROLLBACK
+[0m18:41:26.791926 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9'
+[0m18:41:26.791926 [debug] [Thread-1 (]: On test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9: Close
+[0m18:41:26.792926 [info ] [Thread-1 (]: 2 of 3 PASS not_null_04_riders_performance_rider_id ............................ [[32mPASS[0m in 0.01s]
+[0m18:41:26.792926 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9
+[0m18:41:26.793928 [debug] [Thread-1 (]: Began running node test.dbt_project.not_null_05_weekly_trends_week.57fdac3289
+[0m18:41:26.793928 [info ] [Thread-1 (]: 3 of 3 START test not_null_05_weekly_trends_week ............................... [RUN]
+[0m18:41:26.794948 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_project.not_null_04_riders_performance_rider_id.7223b889d9, now test.dbt_project.not_null_05_weekly_trends_week.57fdac3289)
+[0m18:41:26.794948 [debug] [Thread-1 (]: Began compiling node test.dbt_project.not_null_05_weekly_trends_week.57fdac3289
+[0m18:41:26.799928 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_project.not_null_05_weekly_trends_week.57fdac3289"
+[0m18:41:26.800932 [debug] [Thread-1 (]: Began executing node test.dbt_project.not_null_05_weekly_trends_week.57fdac3289
+[0m18:41:26.803933 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_project.not_null_05_weekly_trends_week.57fdac3289"
+[0m18:41:26.805929 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_05_weekly_trends_week.57fdac3289"
+[0m18:41:26.806929 [debug] [Thread-1 (]: On test.dbt_project.not_null_05_weekly_trends_week.57fdac3289: BEGIN
+[0m18:41:26.806929 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:41:26.807927 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:26.807927 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_project.not_null_05_weekly_trends_week.57fdac3289"
+[0m18:41:26.808929 [debug] [Thread-1 (]: On test.dbt_project.not_null_05_weekly_trends_week.57fdac3289: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_project", "target_name": "dev", "node_id": "test.dbt_project.not_null_05_weekly_trends_week.57fdac3289"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select week
+from "dev"."main"."05_weekly_trends"
+where week is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m18:41:26.809928 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m18:41:26.810929 [debug] [Thread-1 (]: On test.dbt_project.not_null_05_weekly_trends_week.57fdac3289: ROLLBACK
+[0m18:41:26.811952 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_project.not_null_05_weekly_trends_week.57fdac3289'
+[0m18:41:26.811952 [debug] [Thread-1 (]: On test.dbt_project.not_null_05_weekly_trends_week.57fdac3289: Close
+[0m18:41:26.812928 [info ] [Thread-1 (]: 3 of 3 PASS not_null_05_weekly_trends_week ..................................... [[32mPASS[0m in 0.02s]
+[0m18:41:26.813927 [debug] [Thread-1 (]: Finished running node test.dbt_project.not_null_05_weekly_trends_week.57fdac3289
+[0m18:41:26.814928 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:26.814928 [debug] [MainThread]: On master: BEGIN
+[0m18:41:26.815928 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:41:26.815928 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m18:41:26.816928 [debug] [MainThread]: On master: COMMIT
+[0m18:41:26.816928 [debug] [MainThread]: Using duckdb connection "master"
+[0m18:41:26.817928 [debug] [MainThread]: On master: COMMIT
+[0m18:41:26.817928 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m18:41:26.818929 [debug] [MainThread]: On master: Close
+[0m18:41:26.818929 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:41:26.819928 [debug] [MainThread]: Connection 'list_dev_main' was properly closed.
+[0m18:41:26.819928 [debug] [MainThread]: Connection 'test.dbt_project.not_null_05_weekly_trends_week.57fdac3289' was properly closed.
+[0m18:41:26.819928 [info ] [MainThread]: 
+[0m18:41:26.820927 [info ] [MainThread]: Finished running 3 data tests in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m18:41:26.821929 [debug] [MainThread]: Command end result
+[0m18:41:26.839926 [debug] [MainThread]: Wrote artifact WritableManifest to C:\DE_projects\food_del_pipeline\target\manifest.json
+[0m18:41:26.841929 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\DE_projects\food_del_pipeline\target\semantic_manifest.json
+[0m18:41:26.847930 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\DE_projects\food_del_pipeline\target\run_results.json
+[0m18:41:26.847930 [info ] [MainThread]: 
+[0m18:41:26.848928 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:41:26.849932 [info ] [MainThread]: 
+[0m18:41:26.849932 [info ] [MainThread]: Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[0m18:41:26.850928 [debug] [MainThread]: Command `dbt test` succeeded at 18:41:26.850928 after 0.95 seconds
+[0m18:41:26.851929 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020717C4BF90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020717C4BA10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207113D1E90>]}
+[0m18:41:26.851929 [debug] [MainThread]: Flushing usage events
+[0m18:41:27.889917 [debug] [MainThread]: An error was encountered while trying to flush usage events

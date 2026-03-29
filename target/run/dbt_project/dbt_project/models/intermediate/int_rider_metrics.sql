@@ -1,7 +1,13 @@
 
   
-  create view "dev"."main"."int_rider_metrics__dbt_tmp" as (
-    SELECT
+    
+    
+
+    create  table
+      "dev"."main"."int_rider_metrics__dbt_tmp"
+  
+    as (
+      SELECT
     rider_id,
     COUNT(order_id) AS total_orders,
     SUM(sla_breach_flag) AS late_orders,
@@ -11,4 +17,6 @@
 FROM "dev"."main"."stg_order_facts"
 WHERE rider_id IS NOT NULL
 GROUP BY rider_id
-  );
+    );
+  
+  

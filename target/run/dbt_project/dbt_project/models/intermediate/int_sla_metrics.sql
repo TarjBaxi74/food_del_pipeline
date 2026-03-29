@@ -1,7 +1,13 @@
 
   
-  create view "dev"."main"."int_sla_metrics__dbt_tmp" as (
-    WITH base AS (
+    
+    
+
+    create  table
+      "dev"."main"."int_sla_metrics__dbt_tmp"
+  
+    as (
+      WITH base AS (
     SELECT
         order_id,
         city,
@@ -26,4 +32,6 @@ SELECT
         ELSE 'MAJOR_DELAY'
     END AS delay_bucket
 FROM base
-  );
+    );
+  
+  

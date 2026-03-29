@@ -1,7 +1,13 @@
 
   
-  create view "dev"."main"."int_restaurant_metrics__dbt_tmp" as (
-    SELECT
+    
+    
+
+    create  table
+      "dev"."main"."int_restaurant_metrics__dbt_tmp"
+  
+    as (
+      SELECT
     restaurant_id,
     city,
     COUNT(order_id) AS total_orders,
@@ -10,4 +16,6 @@
     SUM(sla_breach_flag) * 1.0 / COUNT(order_id) AS breach_rate
 FROM "dev"."main"."stg_order_facts"
 GROUP BY restaurant_id, city
-  );
+    );
+  
+  

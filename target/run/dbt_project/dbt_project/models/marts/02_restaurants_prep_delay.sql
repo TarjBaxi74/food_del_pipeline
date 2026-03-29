@@ -1,7 +1,13 @@
 
   
-  create view "dev"."main"."02_restaurants_prep_delay__dbt_tmp" as (
-    SELECT
+    
+    
+
+    create  table
+      "dev"."main"."02_restaurants_prep_delay__dbt_tmp"
+  
+    as (
+      SELECT
     restaurant_id,
     city,
     total_orders,
@@ -10,4 +16,6 @@
     breach_rate
 FROM "dev"."main"."int_restaurant_metrics"
 ORDER BY breach_rate DESC
-  );
+    );
+  
+  

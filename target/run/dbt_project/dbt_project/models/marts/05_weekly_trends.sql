@@ -1,7 +1,13 @@
 
   
-  create view "dev"."main"."05_weekly_trends__dbt_tmp" as (
-    SELECT
+    
+    
+
+    create  table
+      "dev"."main"."05_weekly_trends__dbt_tmp"
+  
+    as (
+      SELECT
     DATE_TRUNC('week', order_date) AS week,
     COUNT(order_id) AS total_orders,
     SUM(delivery_success_flag) AS completed_orders,
@@ -11,4 +17,6 @@
 FROM "dev"."main"."stg_order_facts"
 GROUP BY week
 ORDER BY week
-  );
+    );
+  
+  

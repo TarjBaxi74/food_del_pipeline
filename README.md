@@ -1,36 +1,34 @@
 # 🍔 Food Delivery Operations Analytics Pipeline
 
-A capstone data engineering project implementing an end-to-end analytics pipeline for a simulated food delivery platform, built using **Medallion Architecture** (Raw → Bronze → Silver → Analytics).
+An end-to-end data engineering capstone project implementing a full analytics pipeline for a simulated food delivery platform, built using **Medallion Architecture** (Raw → Bronze → Silver → Analytics).
 
 ---
 
 ## 📌 Project Overview
 
-This pipeline processes simulated food delivery operational data to generate actionable insights across five key business questions:
+This pipeline processes synthetic food delivery operational data across 8 Indian cities and 67 days of simulated operations to produce actionable business insights across five key questions:
 
-- Which cities and time slots have the highest SLA breach rates?
-- Which restaurants cause prep-time delays that push deliveries beyond target?
-- What percentage of refunds are driven by delay, missing items, or cancellations?
-- Which riders consistently handle more orders without increasing late deliveries?
-- How do completed orders, cancellations, and refund amounts trend week over week?
+1. Which cities and time slots have the highest SLA breach rates?
+2. Which restaurants cause prep-time delays that push deliveries beyond target?
+3. What percentage of refunds are driven by delay, missing items, or cancellations?
+4. Which riders consistently handle more orders without increasing late deliveries?
+5. How do completed orders, cancellations, and refund amounts trend week over week?
 
 ---
 
 ## 🏗️ Architecture
-
-The pipeline follows a **Medallion (Lakehouse) Architecture**:
 
 ```
 Raw Layer → Bronze Layer → Silver Layer → Analytics Layer (dbt)
 ```
 
 | Layer | Technology | Status |
-|---|---|---|
-| Raw (Data Generation) | Python | ✅ Complete |
-| Bronze (Ingestion) | DuckDB + Parquet | ✅ Complete |
+|-------|-----------|--------|
+| Raw — Data Generation | Python (Faker + NumPy) | ✅ Complete |
+| Bronze — Ingestion | DuckDB + Parquet | ✅ Complete |
 | Profiling & Validation | Python (custom scripts) | ✅ Complete |
-| Silver (Transformation) | PySpark | ✅ Complete |
-| Analytics (dbt models) | dbt + DuckDB | ✅ Complete |
+| Silver — Transformation | PySpark | ✅ Complete |
+| Analytics — dbt Models | dbt + DuckDB | ✅ Complete |
 
 ---
 
@@ -38,11 +36,11 @@ Raw Layer → Bronze Layer → Silver Layer → Analytics Layer (dbt)
 
 ```
 food_del_pipeline/
-├── config/                          # Central configuration
+├── config/                          # Central configuration (settings.py)
 ├── data/
-│   ├── raw/                         # Generated source files (CSV + JSONL)
-│   ├── bronze/                      # DuckDB-ingested Parquet files
-│   ├── silver/                      # PySpark-transformed Parquet files
+│   ├── raw/                         # Generated source files (CSV + JSON)
+│   ├── bronze/                      # DuckDB-ingested Parquet + metadata
+│   ├── silver/                      # PySpark-cleaned, enriched Parquet
 │   └── warehouse/analytics.duckdb  # dbt-connected local warehouse
 ├── src/
 │   ├── generators/                  # 7 dataset generators
@@ -56,8 +54,7 @@ food_del_pipeline/
 ├── docs/                            # Architecture and solution docs
 ├── dbt_project.yml                  # dbt project configuration
 ├── pyproject.toml                   # Python project metadata
-├── Makefile                         # Convenience commands
-└── reference.md                     # Detailed architecture reference
+└── Makefile                         # Convenience commands
 ```
 
 ---
@@ -65,24 +62,23 @@ food_del_pipeline/
 ## ⚙️ Technology Stack
 
 | Tool | Role |
-|---|---|
+|------|------|
 | **Python** | Data generation, orchestration, profiling |
 | **DuckDB** | Bronze ingestion, local analytical warehouse, dbt backend |
 | **PySpark** | Silver layer business transformations |
 | **dbt (dbt-duckdb)** | Staging, intermediate, and mart modelling |
 | **Pandas** | Profiling and exploratory validation |
-| **Jupyter Notebooks** | Exploration and mart validation |
-| **SQL** | dbt model queries and DuckDB analytics |
+| **Jupyter Notebooks** | Data exploration and mart validation |
 | **Git + GitHub** | Version control |
 
 ---
 
 ## 📦 Datasets
 
-The pipeline uses 7 synthetically generated datasets simulating 60+ days of food delivery operations:
+7 synthetically generated datasets simulating 67 days of food delivery operations across 8 cities:
 
 | Dataset | Key Fields |
-|---|---|
+|---------|-----------|
 | `orders.csv` | order_id, customer_id, restaurant_id, city, order_ts, promised_delivery_ts, status, order_value, payment_mode |
 | `order_items.csv` | order_id, item_id, quantity, item_price, cuisine_type |
 | `delivery_events.json` | order_id, rider_id, event_type, event_ts, latitude, longitude |
@@ -91,7 +87,7 @@ The pipeline uses 7 synthetically generated datasets simulating 60+ days of food
 | `refunds.csv` | refund_id, order_id, refund_ts, refund_reason, refund_amount |
 | `support_tickets.csv` | ticket_id, order_id, ticket_type, created_ts, resolution_status |
 
-Data includes realistic noise: missing values, duplicates, late events, cancellations, and mismatched keys.
+Data includes realistic noise: missing values (2%), duplicates (0.5%), late-arriving events (3%), orphan keys (1%), and a 12% SLA breach rate.
 
 ---
 
@@ -100,17 +96,17 @@ Data includes realistic noise: missing values, duplicates, late events, cancella
 ```
 src/generators/
       ↓
-data/raw/              (CSV + JSONL)
+data/raw/              (CSV + JSON)
       ↓
 src/loaders/ [DuckDB]
       ↓
-data/bronze/           (Parquet + metadata columns)
+data/bronze/           (Parquet + _source_file, _ingested_at, _batch_id)
       ↓
 src/profiling/         (null checks, duplicate detection, lifecycle validation)
       ↓
 src/spark_jobs/silver/ [PySpark]
       ↓
-data/silver/           (cleaned, enriched Parquet)
+data/silver/           (cleaned, enriched Parquet + DQ flags)
       ↓
 src/loaders/silver_to_duckdb.py
       ↓
@@ -123,31 +119,32 @@ staging → intermediate → marts
 
 ---
 
-## 🧱 dbt Layer (Analytics)
+## 🧱 dbt Layer
 
 ### Staging (`models/staging/`)
-One model per silver source — column renaming, type casting, and lightweight filtering.
+One model per silver source table — column renaming, type casting, and lightweight DQ filtering.
 
 ### Intermediate (`models/intermediate/`)
-Complex joins and business logic:
-- `int_order_delivery_timeline.sql`
-- `int_order_refund_joined.sql`
-- `int_rider_order_metrics.sql`
-- `int_restaurant_prep_times.sql`
+Complex joins and business logic — all `ephemeral` (no storage cost):
+
+- `int_order_delivery_timeline` — pivots delivery events, computes prep/delivery/total times, sets SLA breach flag
+- `int_order_refund_joined` — left joins orders to refunds, maps reason to driver category
+- `int_rider_order_metrics` — daily per-rider: orders delivered, late count, avg delivery time
+- `int_restaurant_prep_times` — per-restaurant prep statistics
 
 ### Marts (`models/marts/`)
 
-**Dimensions & Facts:**
-- `dim_restaurants.sql`, `dim_riders.sql`, `dim_date.sql`, `fct_orders.sql`
+**Core:**
+`dim_restaurants`, `dim_riders`, `dim_date`, `fct_orders`
 
 **Analytical Marts:**
 
 | Mart | Business Question |
-|---|---|
+|------|-----------------|
 | `mart_sla_breach_analysis` | Cities and time slots with highest SLA breach rate |
 | `mart_restaurant_prep_delays` | Restaurants causing prep-time-driven late deliveries |
-| `mart_refund_drivers` | Refund breakdown by delay, missing items, cancellations |
-| `mart_rider_performance` | Riders handling high volumes without increasing lateness |
+| `mart_refund_drivers` | Refund breakdown by delay, missing items, and cancellations |
+| `mart_rider_performance` | Riders handling high volume without increasing lateness |
 | `mart_weekly_trends` | Week-over-week order, cancellation, and refund trends |
 
 ---
@@ -156,9 +153,8 @@ Complex joins and business logic:
 
 ### Prerequisites
 
-- Python 3.8+
-- Java (required for PySpark)
-- `pip` package manager
+- Python 3.10+
+- Java 8+ (required for PySpark)
 
 ### Installation
 
@@ -168,58 +164,105 @@ cd food_del_pipeline
 pip install -e .
 ```
 
-### Running the Pipeline
+### Run the Full Pipeline
 
-**1. Generate raw data:**
 ```bash
-python src/generators/<generator_script>.py
+python -m src.pipeline_runner
 ```
 
-**2. Ingest to Bronze (DuckDB):**
-```bash
-python src/loaders/<bronze_loader>.py
-```
+This executes all 5 steps in sequence:
 
-**3. Run data profiling:**
-```bash
-python src/profiling/<profiling_script>.py
-```
+| Step | Action |
+|------|--------|
+| Step 1 | Generate 7 raw datasets |
+| Step 2 | Ingest raw files to Bronze (DuckDB → Parquet) |
+| Step 3 | Run Silver transformations (PySpark) |
+| Step 4 | Run dbt models and tests |
+| Step 5 | Export analytical marts to CSV |
 
-**4. Run Silver transformations (PySpark):**
+Typical runtime: ~35 seconds on a local machine.
+
+### Run Individual Steps
+
 ```bash
+# Generate raw data only
+python -m src.generators.orchestrator
+
+# Bronze ingestion only
+python -m src.loaders.bronze_loader
+
+# Silver transformations only
 make run_spark
-# or directly:
-python src/spark_jobs/test_spark.py
-```
 
-**5. Load Silver to DuckDB warehouse:**
-```bash
-python src/loaders/silver_to_duckdb.py
-```
+# Load silver to DuckDB
+python -m src.loaders.silver_to_duckdb
 
-**6. Run dbt models:**
-```bash
-cd dbt_project
-dbt run
-dbt test
+# dbt only
+cd dbt_project && dbt run && dbt test
 ```
 
 ---
 
 ## 🧪 Testing
 
-Python unit tests are located in `tests/`. dbt tests are in `dbt_project/tests/`, including:
-- `assert_refund_pct_sums_to_100.sql`
-- Schema tests on all staging models
+### Python Tests
+
+```bash
+pytest tests/ -v
+```
+
+Tests cover generator output quality and silver transformation correctness.
+
+### dbt Tests
+
+Run automatically as part of the pipeline. Includes:
+
+- `unique` + `not_null` schema tests on all staging models
+- `not_null` tests on key mart columns
+- Custom SQL test: `assert_refund_pct_sums_to_100` — validates that refund driver percentages sum to 100% (±0.1% tolerance)
+
+---
+
+## 📊 Output
+
+After a successful pipeline run, five mart CSVs are exported to `data/warehouse/`:
+
+| File | Contents |
+|------|---------|
+| `sla_breach_analysis.csv` | Breach rates by city and time slot |
+| `restaurant_prep_delays.csv` | Prep time metrics and risk categories per restaurant |
+| `refund_drivers.csv` | Refund count and amount by driver category |
+| `rider_performance.csv` | Efficiency scores and performance tiers per rider |
+| `weekly_trends.csv` | Week-over-week operational metrics |
 
 ---
 
 ## 📖 Documentation
 
-See [`reference.md`](./reference.md) for the full architecture reference, including detailed layer descriptions, technology rationale, and transformation logic.
+| Document | Description |
+|----------|-------------|
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | Full technical architecture — schemas, layer logic, dbt config, tech stack decisions |
+| [`docs/SOLUTION.md`](docs/SOLUTION.md) | Business context, metric definitions, design decisions, DQ approach |
+| [`reference.md`](reference.md) | High-level architecture reference |
 
 ---
 
-## 🎯 Expected Outcome
+## 🎯 Key Design Decisions
 
-A complete analytics pipeline demonstrating practical modern data engineering — raw simulation, medallion layering, quality profiling, distributed transformation, and analytics modelling — producing actionable insights on delivery performance, operational efficiency, and refund behaviour.
+**Medallion Architecture** — Raw, Bronze, and Silver layers are kept separate so data quality issues are visible and auditable rather than silently fixed.
+
+**DuckDB as warehouse backend** — Zero infrastructure, columnar OLAP performance, native Parquet support, and first-class dbt integration make it ideal for local pipeline development.
+
+**PySpark for Silver** — Provides schema enforcement, partitioned output, and a production-representative transformation API even in local mode.
+
+**Explicit DQ flags** — Every Silver table carries `_dq_*` columns rather than dropping bad records. Marts filter these out in the staging layer, maintaining a clean separation between visibility and consumption.
+
+---
+
+## 🔮 Future Enhancements
+
+- Incremental dbt models to replace full-refresh processing
+- Streaming ingestion with Kafka + Spark Structured Streaming
+- Dashboard layer via Metabase or Apache Superset
+- ML-based anomaly detection for data quality monitoring
+- Airflow or Prefect for production scheduling and observability
